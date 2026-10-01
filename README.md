@@ -721,3 +721,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 - Model `.md` files are empty slots for model-specific guidance.
 - `.gitkeep` files keep empty model-state directories in Git.
 <!-- README TREE END -->
+
+Similar projects:
+* [peteromallet/desloppify](https://github.com/peteromallet/desloppify) which focused on codebase management, not writing
+
+And expands on the ideas of previous projects like:
+* [shreyas-makes/deslopify](https://github.com/shreyas-makes/deslopify) 
