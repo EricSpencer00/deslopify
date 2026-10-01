@@ -272,9 +272,6 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gpt-5.4-pro.md
 │   │       │   │   │   ├── gpt-5.4.md
 │   │       │   │   │   ├── gpt-5.5-pro.md
-│   │       │   │   │   ├── gpt-5.5.md
-│   │       │   │   │   ├── gpt-5.6-luna.md
-│   │       │   │   │   ├── gpt-5.6-terra.md
 │   │       │   │   │   ├── gpt-5.md
 │   │       │   │   │   ├── gpt-oss-120b.md
 │   │       │   │   │   ├── gpt-oss-20b.md
@@ -286,9 +283,11 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── o3.md
 │   │       │   │   │   └── o4-mini.md
 │   │       │   │   ├── deprecated/ — legacy model slots
+│   │       │   │   │   ├── codex-mini-latest.md
 │   │       │   │   │   ├── gpt-3.5-turbo.md
 │   │       │   │   │   ├── gpt-4-turbo.md
 │   │       │   │   │   ├── gpt-4.5-preview.md
+│   │       │   │   │   ├── gpt-5-codex-mini.md
 │   │       │   │   │   ├── gpt-5-codex.md
 │   │       │   │   │   ├── gpt-5.1-chat.md
 │   │       │   │   │   ├── gpt-5.1-codex-max.md
@@ -296,9 +295,13 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gpt-5.1-codex.md
 │   │       │   │   │   ├── gpt-5.2-chat.md
 │   │       │   │   │   ├── gpt-5.2-codex.md
-│   │       │   │   │   └── gpt-5.3-chat.md
+│   │       │   │   │   ├── gpt-5.3-chat.md
+│   │       │   │   │   └── gpt-5.3-codex-spark.md
 │   │       │   │   ├── new/ — Codex model slots
+│   │       │   │   │   ├── gpt-5.5.md
+│   │       │   │   │   ├── gpt-5.6-luna.md
 │   │       │   │   │   ├── gpt-5.6-sol.md
+│   │       │   │   │   ├── gpt-5.6-terra.md
 │   │       │   │   │   ├── gpt-6-astra.md
 │   │       │   │   │   ├── gpt-6-luna.md
 │   │       │   │   │   ├── gpt-6-sol.md
@@ -621,9 +624,6 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gpt-5.4-pro.md
 │   │       │   │   │   ├── gpt-5.4.md
 │   │       │   │   │   ├── gpt-5.5-pro.md
-│   │       │   │   │   ├── gpt-5.5.md
-│   │       │   │   │   ├── gpt-5.6-luna.md
-│   │       │   │   │   ├── gpt-5.6-terra.md
 │   │       │   │   │   ├── gpt-5.md
 │   │       │   │   │   ├── gpt-oss-120b.md
 │   │       │   │   │   ├── gpt-oss-20b.md
@@ -635,9 +635,11 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── o3.md
 │   │       │   │   │   └── o4-mini.md
 │   │       │   │   ├── deprecated/ — legacy model slots
+│   │       │   │   │   ├── codex-mini-latest.md
 │   │       │   │   │   ├── gpt-3.5-turbo.md
 │   │       │   │   │   ├── gpt-4-turbo.md
 │   │       │   │   │   ├── gpt-4.5-preview.md
+│   │       │   │   │   ├── gpt-5-codex-mini.md
 │   │       │   │   │   ├── gpt-5-codex.md
 │   │       │   │   │   ├── gpt-5.1-chat.md
 │   │       │   │   │   ├── gpt-5.1-codex-max.md
@@ -645,9 +647,13 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gpt-5.1-codex.md
 │   │       │   │   │   ├── gpt-5.2-chat.md
 │   │       │   │   │   ├── gpt-5.2-codex.md
-│   │       │   │   │   └── gpt-5.3-chat.md
+│   │       │   │   │   ├── gpt-5.3-chat.md
+│   │       │   │   │   └── gpt-5.3-codex-spark.md
 │   │       │   │   ├── new/ — Codex model slots
+│   │       │   │   │   ├── gpt-5.5.md
+│   │       │   │   │   ├── gpt-5.6-luna.md
 │   │       │   │   │   ├── gpt-5.6-sol.md
+│   │       │   │   │   ├── gpt-5.6-terra.md
 │   │       │   │   │   ├── gpt-6-astra.md
 │   │       │   │   │   ├── gpt-6-luna.md
 │   │       │   │   │   ├── gpt-6-sol.md
