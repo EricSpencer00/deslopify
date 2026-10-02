@@ -13,9 +13,16 @@ END = "<!-- README TREE END -->"
 IGNORED = {".git", ".agents", "__pycache__"}
 MODEL_STATES = {"new", "available", "deprecated"}
 NEW_MODEL_NOTES = {
+    "alibaba": "Qwen Code model slots",
+    "bytedance": "Trae model slots",
+    "google": "Gemini CLI/Jules model slots",
+    "minimax": "MiniMax Code model slots",
+    "mistral": "Mistral Vibe model slots",
+    "moonshot": "Kimi Code model slots",
     "openai": "Codex model slots",
     "anthropic": "Claude Code model slots",
     "xai": "Grok Build model slots",
+    "z-ai": "ZCode model slots",
 }
 
 
@@ -37,6 +44,8 @@ def file_note(path: Path) -> str:
         return "skill entrypoint"
     if path == Path("scripts/update_readme_tree.py"):
         return "README tree generator"
+    if path == Path("scripts/sync_model_harnesses.py"):
+        return "provider-native model slot sync"
     if path == Path(".github/workflows/readme-tree.yml"):
         return "CI update job"
     if path.name == "general.md":

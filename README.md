@@ -30,7 +30,6 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── qwen3-coder.md
 │   │       │   │   │   ├── qwen3-max.md
 │   │       │   │   │   ├── qwen3-next.md
-│   │       │   │   │   ├── qwen3.5-plus.md
 │   │       │   │   │   ├── qwen3.5.md
 │   │       │   │   │   ├── qwen3.6-plus.md
 │   │       │   │   │   ├── qwen3.7-max.md
@@ -41,8 +40,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── qwen2.5-coder.md
 │   │       │   │   │   ├── qwen2.5.md
 │   │       │   │   │   └── qwq-32b.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Qwen Code model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── qwen3.5-plus.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── allenai/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -102,8 +102,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── seed-2.0-lite.md
 │   │       │   │   │   ├── seed-2.0-mini.md
 │   │       │   │   │   └── seed-2.0-pro.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Trae model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── seed-code.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── cohere/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -141,10 +142,8 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gemini-2.5-flash-lite.md
 │   │       │   │   │   ├── gemini-2.5-flash.md
 │   │       │   │   │   ├── gemini-2.5-pro.md
-│   │       │   │   │   ├── gemini-3-flash.md
 │   │       │   │   │   ├── gemini-3-pro.md
 │   │       │   │   │   ├── gemini-3.1-flash-lite.md
-│   │       │   │   │   ├── gemini-3.1-pro.md
 │   │       │   │   │   ├── gemini-3.5-flash-lite.md
 │   │       │   │   │   ├── gemini-3.5-flash.md
 │   │       │   │   │   ├── gemini-3.6-flash.md
@@ -159,8 +158,11 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gemini-1.5-pro.md
 │   │       │   │   │   ├── gemini-2.0-flash-lite.md
 │   │       │   │   │   └── gemini-2.0-flash.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Gemini CLI/Jules model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   ├── gemini-3-flash.md
+│   │       │   │   │   ├── gemini-3.1-pro.md
+│   │       │   │   │   └── gemini-auto.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── ibm/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -204,8 +206,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── minimax-m2.1.md
 │   │       │   │   │   ├── minimax-m2.5.md
 │   │       │   │   │   └── minimax-m2.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — MiniMax Code model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── minimax-m3.1-flash-preview.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── mistral/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -225,21 +228,24 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── mistral-medium-3.1.md
 │   │       │   │   │   ├── mistral-small-3.2.md
 │   │       │   │   │   └── mistral-small-creative.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Mistral Vibe model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── mistral-medium-latest.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── moonshot/
 │   │       │   │   ├── available/ — provider/API model slots
 │   │       │   │   │   ├── kimi-k2-thinking.md
 │   │       │   │   │   ├── kimi-k2.7-code.md
-│   │       │   │   │   ├── kimi-k2.8-preview.md
-│   │       │   │   │   └── kimi-k3.md
+│   │       │   │   │   └── kimi-k2.8-preview.md
 │   │       │   │   ├── deprecated/ — legacy model slots
 │   │       │   │   │   ├── kimi-k2.5.md
 │   │       │   │   │   ├── kimi-k2.6.md
 │   │       │   │   │   └── kimi-k2.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Kimi Code model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   ├── kimi-for-coding-highspeed.md
+│   │       │   │   │   ├── kimi-for-coding.md
+│   │       │   │   │   └── kimi-k3.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── nvidia/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -348,9 +354,7 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   └── z-ai/
 │   │       │       ├── available/ — provider/API model slots
 │   │       │       │   ├── glm-4.7-flash.md
-│   │       │       │   ├── glm-5.3-flash.md
-│   │       │       │   ├── glm-5.3-flashx.md
-│   │       │       │   └── glm-5.3.md
+│   │       │       │   └── glm-5.3-flashx.md
 │   │       │       ├── deprecated/ — legacy model slots
 │   │       │       │   ├── glm-4.5-air.md
 │   │       │       │   ├── glm-4.5.md
@@ -359,8 +363,10 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │       │   ├── glm-5.1.md
 │   │       │       │   ├── glm-5.2.md
 │   │       │       │   └── glm-5.md
-│   │       │       ├── new/ — provider-native model slots
-│   │       │       │   └── .gitkeep — keeps an empty directory tracked
+│   │       │       ├── new/ — ZCode model slots
+│   │       │       │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │       │   ├── glm-5.3-flash.md
+│   │       │       │   └── glm-5.3.md
 │   │       │       └── general.md — general guidance slot
 │   │       └── general.md — general guidance slot
 │   ├── ne-fac/
@@ -383,7 +389,6 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── qwen3-coder.md
 │   │       │   │   │   ├── qwen3-max.md
 │   │       │   │   │   ├── qwen3-next.md
-│   │       │   │   │   ├── qwen3.5-plus.md
 │   │       │   │   │   ├── qwen3.5.md
 │   │       │   │   │   ├── qwen3.6-plus.md
 │   │       │   │   │   ├── qwen3.7-max.md
@@ -394,8 +399,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── qwen2.5-coder.md
 │   │       │   │   │   ├── qwen2.5.md
 │   │       │   │   │   └── qwq-32b.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Qwen Code model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── qwen3.5-plus.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── allenai/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -455,8 +461,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── seed-2.0-lite.md
 │   │       │   │   │   ├── seed-2.0-mini.md
 │   │       │   │   │   └── seed-2.0-pro.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Trae model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── seed-code.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── cohere/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -494,10 +501,8 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gemini-2.5-flash-lite.md
 │   │       │   │   │   ├── gemini-2.5-flash.md
 │   │       │   │   │   ├── gemini-2.5-pro.md
-│   │       │   │   │   ├── gemini-3-flash.md
 │   │       │   │   │   ├── gemini-3-pro.md
 │   │       │   │   │   ├── gemini-3.1-flash-lite.md
-│   │       │   │   │   ├── gemini-3.1-pro.md
 │   │       │   │   │   ├── gemini-3.5-flash-lite.md
 │   │       │   │   │   ├── gemini-3.5-flash.md
 │   │       │   │   │   ├── gemini-3.6-flash.md
@@ -512,8 +517,11 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── gemini-1.5-pro.md
 │   │       │   │   │   ├── gemini-2.0-flash-lite.md
 │   │       │   │   │   └── gemini-2.0-flash.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Gemini CLI/Jules model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   ├── gemini-3-flash.md
+│   │       │   │   │   ├── gemini-3.1-pro.md
+│   │       │   │   │   └── gemini-auto.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── ibm/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -557,8 +565,9 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── minimax-m2.1.md
 │   │       │   │   │   ├── minimax-m2.5.md
 │   │       │   │   │   └── minimax-m2.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — MiniMax Code model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── minimax-m3.1-flash-preview.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── mistral/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -578,21 +587,24 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   │   │   ├── mistral-medium-3.1.md
 │   │       │   │   │   ├── mistral-small-3.2.md
 │   │       │   │   │   └── mistral-small-creative.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Mistral Vibe model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   └── mistral-medium-latest.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── moonshot/
 │   │       │   │   ├── available/ — provider/API model slots
 │   │       │   │   │   ├── kimi-k2-thinking.md
 │   │       │   │   │   ├── kimi-k2.7-code.md
-│   │       │   │   │   ├── kimi-k2.8-preview.md
-│   │       │   │   │   └── kimi-k3.md
+│   │       │   │   │   └── kimi-k2.8-preview.md
 │   │       │   │   ├── deprecated/ — legacy model slots
 │   │       │   │   │   ├── kimi-k2.5.md
 │   │       │   │   │   ├── kimi-k2.6.md
 │   │       │   │   │   └── kimi-k2.md
-│   │       │   │   ├── new/ — provider-native model slots
-│   │       │   │   │   └── .gitkeep — keeps an empty directory tracked
+│   │       │   │   ├── new/ — Kimi Code model slots
+│   │       │   │   │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │   │   │   ├── kimi-for-coding-highspeed.md
+│   │       │   │   │   ├── kimi-for-coding.md
+│   │       │   │   │   └── kimi-k3.md
 │   │       │   │   └── general.md — general guidance slot
 │   │       │   ├── nvidia/
 │   │       │   │   ├── available/ — provider/API model slots
@@ -701,9 +713,7 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │   └── z-ai/
 │   │       │       ├── available/ — provider/API model slots
 │   │       │       │   ├── glm-4.7-flash.md
-│   │       │       │   ├── glm-5.3-flash.md
-│   │       │       │   ├── glm-5.3-flashx.md
-│   │       │       │   └── glm-5.3.md
+│   │       │       │   └── glm-5.3-flashx.md
 │   │       │       ├── deprecated/ — legacy model slots
 │   │       │       │   ├── glm-4.5-air.md
 │   │       │       │   ├── glm-4.5.md
@@ -712,12 +722,15 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   │       │       │   ├── glm-5.1.md
 │   │       │       │   ├── glm-5.2.md
 │   │       │       │   └── glm-5.md
-│   │       │       ├── new/ — provider-native model slots
-│   │       │       │   └── .gitkeep — keeps an empty directory tracked
+│   │       │       ├── new/ — ZCode model slots
+│   │       │       │   ├── .gitkeep — keeps an empty directory tracked
+│   │       │       │   ├── glm-5.3-flash.md
+│   │       │       │   └── glm-5.3.md
 │   │       │       └── general.md — general guidance slot
 │   │       └── general.md — general guidance slot
 │   └── SKILL.md — skill entrypoint
 ├── scripts/
+│   ├── sync_model_harnesses.py — provider-native model slot sync
 │   └── update_readme_tree.py — README tree generator
 ├── LICENSE — license
 └── README.md — repository map
