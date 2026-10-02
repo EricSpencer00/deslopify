@@ -12,6 +12,11 @@ START = "<!-- README TREE START -->"
 END = "<!-- README TREE END -->"
 IGNORED = {".git", ".agents", "__pycache__"}
 MODEL_STATES = {"new", "available", "deprecated"}
+NEW_MODEL_NOTES = {
+    "openai": "Codex model slots",
+    "anthropic": "Claude Code model slots",
+    "xai": "Grok Build model slots",
+}
 
 
 def repository_files() -> list[Path]:
@@ -45,7 +50,7 @@ def file_note(path: Path) -> str:
 
 def directory_note(path: Path) -> str:
     if path.name == "new":
-        return "Codex model slots"
+        return NEW_MODEL_NOTES.get(path.parent.name, "provider-native model slots")
     if path.name == "available":
         return "provider/API model slots"
     if path.name == "deprecated":
