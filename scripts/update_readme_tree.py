@@ -49,11 +49,11 @@ def file_note(path: Path) -> str:
     if path == Path(".github/workflows/readme-tree.yml"):
         return "CI update job"
     if path.name == "general.md":
-        return "general guidance slot"
+        return "all-model guidance" if path.parent.name == "_template" else "company guidance"
     if path.name == ".gitkeep":
         return "keeps an empty directory tracked"
     if path.suffix == ".md" and len(path.parts) >= 2 and path.parts[-2] in MODEL_STATES:
-        return ""
+        return "model guidance" if (ROOT / path).stat().st_size else ""
     return "repository file"
 
 
@@ -117,8 +117,8 @@ def generated_section(files: list[Path]) -> str:
         "",
         "### File notes",
         "",
-        "- `general.md` is the company guidance slot.",
-        "- Model `.md` files are empty slots for model-specific guidance.",
+        "- `_template/general.md` applies to all models; company `general.md` files apply to that company.",
+        "- Populated model files name the model, any harness or setting, and the writing context. Empty files are unused slots.",
         "- `.gitkeep` files keep empty model-state directories in Git.",
         END,
     ]

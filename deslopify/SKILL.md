@@ -1,18 +1,10 @@
 ---
 name: deslopify
-description: Remove filler, generic phrasing, and over-polished AI style from writing while preserving facts, voice, and intent.
+description: Apply reviewed dos and don'ts to remove filler and generic phrasing from writing, with provider and model-specific guidance.
 ---
 
-# Deslopify
+Read [fac — dos](fac/_template/general.md) and [ne fac — don'ts](ne-fac/_template/general.md).
 
-Use this skill when writing feels padded, generic, or machine-made.
+For a known provider, also read its `general.md` under [fac models](fac/_template/models/) and [ne fac models](ne-fac/_template/models/). Read the matching model file in `new/`, `available/` or `deprecated/` when the model is known. Empty files have no rules.
 
-Keep the author's meaning, facts, voice, audience, and deliberate choices. Do not invent evidence, citations, examples, certainty, personality, or a replacement argument.
-
-Cut sentences that repeat the point or only announce what follows. Replace vague praise and vague quantities with a concrete fact, example, or number already supported by the source. Keep useful qualifications and uncertainty. Preserve technical terms when they carry meaning.
-
-Read the whole piece for flow. Read it aloud when the prose is important. Fix places where the next sentence is predictable, the rhythm is uniform, or the paragraph says more than it knows. Stop when each remaining sentence earns its space.
-
-Do not optimize for an AI-detector score, use a humanizer, add quirks to appear human, or rewrite a passage into a different person's voice. A detector result is a review signal, not proof of authorship.
-
-For the repository's detailed checks, read [fac — dos](fac/) and [ne fac — don'ts](ne-fac/). Provider and model-specific notes belong in the matching model slot; use them only when they describe a behavior that affects the current draft.
+Apply each rule only to its stated writing context and any named harness or setting. Do not infer a provider or model from the draft's style.
