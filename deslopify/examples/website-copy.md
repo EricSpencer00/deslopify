@@ -45,3 +45,9 @@ Before: `Studio / About / A creative home for meaningful experiences. / Our work
 After: `About / Employee-owned design studio. / Contact hello@example.org. / We do not sell personal data.`
 
 Keep the useful page heading and factual ownership, contact, and privacy information. The repeated brand, generic positioning line, and narrated navigation add no new context here.
+
+## Unneeded version-history notices
+
+Before: `The older pages of this site now live on the home page. Start there.`
+
+When current navigation works without that history, omit the notice. Do not polish it into another announcement. Use a direct current action or transparent redirect if a route is needed. Keep notices that communicate required action, possible data loss, compatibility changes, or service impact.

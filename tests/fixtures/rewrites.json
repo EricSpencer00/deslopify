@@ -105,6 +105,31 @@
     ]
   },
   {
+    "id": "obsolete-notice",
+    "context": "Current navigation already reaches the requested content; there is no required migration action, data loss, compatibility change, or service impact to explain.",
+    "before": "The older pages of this site now live on the home page. Start there.",
+    "after": "",
+    "preserve": [],
+    "unchanged": false,
+    "omit_entirely": true,
+    "remove_redundant_copy": [
+      "The older pages of this site now live on the home page. Start there."
+    ]
+  },
+  {
+    "id": "migration-warning",
+    "context": "This migration requires an export to avoid data loss, a client upgrade for compatibility, and planning around an upload outage. Those notices are needed for user action.",
+    "before": "Export your files by 12 October. Files not exported will be deleted. Version 1 clients stop working after the migration. Uploads will be unavailable from 01:00 to 02:00 UTC.",
+    "after": "Export your files by 12 October. Files not exported will be deleted. Version 1 clients stop working after the migration. Uploads will be unavailable from 01:00 to 02:00 UTC.",
+    "preserve": [
+      "Export your files by 12 October.",
+      "Files not exported will be deleted.",
+      "Version 1 clients stop working after the migration.",
+      "Uploads will be unavailable from 01:00 to 02:00 UTC."
+    ],
+    "unchanged": true
+  },
+  {
     "id": "technical",
     "before": "It is important to note that the cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. This underscores its transformative potential. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",
     "after": "The cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",

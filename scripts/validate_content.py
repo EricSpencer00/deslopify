@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def preservation_errors(case, candidate):
     errors = [f'missing: {token}' for token in case['preserve'] if token not in candidate]
+    if case.get('omit_entirely') and candidate.strip():
+        errors.append('unneeded notice rewritten instead of omitted')
     if 'intent' in case:
         intent = case['intent']
         if intent['source'] not in case['before']:

@@ -16,7 +16,11 @@ class ContentTests(unittest.TestCase):
         for case in json.loads((ROOT / 'tests/fixtures/rewrites.json').read_text()):
             with self.subTest(case=case['id']):
                 self.assertEqual(validation.preservation_errors(case, case['after']), [])
-                self.assertTrue(validation.preservation_errors(case, case['after'].replace(case['preserve'][0], '', 1)))
+                if case['preserve']:
+                    self.assertTrue(validation.preservation_errors(case, case['after'].replace(case['preserve'][0], '', 1)))
+                else:
+                    self.assertTrue(case['omit_entirely'])
+                    self.assertTrue(validation.preservation_errors(case, case['before']))
                 self.assertTrue(validation.preservation_errors(case, case['after'] + ' 999'))
                 self.assertTrue(validation.preservation_errors(case, case['after'] + ' https://example.org/invented'))
 
@@ -69,6 +73,19 @@ class ContentTests(unittest.TestCase):
                 self.assertIn(case['intent']['source'], case['before'])
                 self.assertIn(case['intent']['candidate'], case['after'])
                 self.assertTrue(validation.preservation_errors(case, case['after'].replace(case['intent']['candidate'], '', 1)))
+
+    def test_unneeded_notice_omitted_and_critical_warnings_kept(self):
+        cases = {case['id']: case for case in json.loads((ROOT / 'tests/fixtures/rewrites.json').read_text())}
+        notice = cases['obsolete-notice']
+        self.assertEqual(validation.preservation_errors(notice, ''), [])
+        self.assertIn('unneeded notice rewritten instead of omitted',
+                      validation.preservation_errors(notice, 'The home page now contains every section. Start there.'))
+        warning = cases['migration-warning']
+        self.assertEqual(validation.preservation_errors(warning, warning['before']), [])
+        self.assertTrue(validation.preservation_errors(warning, ''))
+        for token in warning['preserve']:
+            with self.subTest(required_warning=token):
+                self.assertTrue(validation.preservation_errors(warning, warning['after'].replace(token, '', 1)))
 
     def test_audience_omissions_keep_needed_context(self):
         cases = {case['id']: case for case in json.loads((ROOT / 'tests/fixtures/rewrites.json').read_text())}

@@ -1,7 +1,22 @@
 # deslopify
 remove AI-generated -isms from your emails, website designs, or "[slop-grenades](https://noslopgrenade.com/)"
 
+Start with [the skill](deslopify/SKILL.md) or [the website-copy examples](deslopify/examples/website-copy.md).
+
+## Install and use
+
+Copy the complete `deslopify/` folder into your project's `.agents/skills/deslopify/` directory. Keep its subfolders so linked guidance resolves.
+
+Then include your draft and intended audience in a request such as:
+
+```text
+$deslopify Edit this draft for its audience while preserving meaning, useful facts, and needed qualifications.
+```
+
 <!-- README TREE START -->
+<details>
+<summary>Model catalog and repository files</summary>
+
 ## File tree
 
 ```text
@@ -759,10 +774,17 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 - `_template/general.md` applies to all models; company `general.md` files apply to that company.
 - Populated model files name the model, any harness or setting, and the writing context. Empty files are unused slots.
 - `.gitkeep` files keep empty model-state directories in Git.
+
+</details>
 <!-- README TREE END -->
+
+<details>
+<summary>Related projects</summary>
 
 Similar projects:
 * [peteromallet/desloppify](https://github.com/peteromallet/desloppify) which focused on codebase management, not writing
 
 And expands on the ideas of previous projects like:
 * [shreyas-makes/deslopify](https://github.com/shreyas-makes/deslopify) 
+
+</details>

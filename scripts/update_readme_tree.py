@@ -109,6 +109,9 @@ def tree_lines(files: list[Path]) -> list[str]:
 def generated_section(files: list[Path]) -> str:
     lines = [
         START,
+        "<details>",
+        "<summary>Model catalog and repository files</summary>",
+        "",
         "## File tree",
         "",
         "```text",
@@ -120,6 +123,8 @@ def generated_section(files: list[Path]) -> str:
         "- `_template/general.md` applies to all models; company `general.md` files apply to that company.",
         "- Populated model files name the model, any harness or setting, and the writing context. Empty files are unused slots.",
         "- `.gitkeep` files keep empty model-state directories in Git.",
+        "",
+        "</details>",
         END,
     ]
     return "\n".join(lines)

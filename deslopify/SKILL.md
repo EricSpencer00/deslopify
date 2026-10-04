@@ -25,4 +25,6 @@ Let photos, content, layout, and working interactions carry their meaning. Do no
 
 About and overview pages should answer a reader's actual questions, not narrate the navigation. Skip repeated brand-name heroes, vague mission/tagline filler, and tours of every section; keep concrete identity, ownership, contact, and policy facts where they help the reader.
 
+Omit history about old versions, retired pages, migrations, or redesigns when users can use the current experience without it, especially in prominent notices. Prefer the current action or a transparent redirect. Keep migration notices needed for user action, data loss, compatibility, or service impact.
+
 Keep copy that supplies needed context or navigation, accessible names and alt text, instructions, errors, product facts, and legal disclosures. A useful heading or label earns its place; minimalism is not a reason to remove it. See the before/after examples in [website copy](examples/website-copy.md).
