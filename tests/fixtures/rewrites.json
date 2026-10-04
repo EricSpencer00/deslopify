@@ -66,6 +66,25 @@
     ]
   },
   {
+    "id": "about-overview",
+    "context": "The header already identifies Studio and links to Work, Team, and Contact. Keep the page heading for navigation and its factual ownership, contact, and privacy information.",
+    "before": "Studio\nAbout\nA creative home for meaningful experiences.\nOur work\nBrowse the projects, learn about the team, and get in touch.\nEmployee-owned design studio.\nContact hello@example.org.\nWe do not sell personal data.",
+    "after": "About\nEmployee-owned design studio.\nContact hello@example.org.\nWe do not sell personal data.",
+    "preserve": [
+      "About",
+      "Employee-owned design studio.",
+      "Contact hello@example.org.",
+      "We do not sell personal data."
+    ],
+    "unchanged": false,
+    "remove_redundant_copy": [
+      "Studio\n",
+      "A creative home for meaningful experiences.",
+      "Our work\n",
+      "Browse the projects, learn about the team, and get in touch."
+    ]
+  },
+  {
     "id": "technical",
     "before": "It is important to note that the cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. This underscores its transformative potential. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",
     "after": "The cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",

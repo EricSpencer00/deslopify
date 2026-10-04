@@ -35,3 +35,13 @@ After:
 > Mountain print — 12 × 18 in matte poster. / Choose a size before adding to cart. / Add to cart
 
 The decorative introduction and preview label repeat the content and layout. The product heading, size/material facts, instruction, and purchase label still help the shopper. Preserve accessible names and alt text, conditional stock errors, and required returns/legal disclosures in their existing roles. Keep a heading when it provides context or navigation; a photo does not replace every reader's access to that information.
+
+## About pages: facts instead of a site tour
+
+When the header already identifies the studio and links to its work, team, and contact page:
+
+Before: `Studio / About / A creative home for meaningful experiences. / Our work / Browse the projects, learn about the team, and get in touch. / Employee-owned design studio. / Contact hello@example.org. / We do not sell personal data.`
+
+After: `About / Employee-owned design studio. / Contact hello@example.org. / We do not sell personal data.`
+
+Keep the useful page heading and factual ownership, contact, and privacy information. The repeated brand, generic positioning line, and narrated navigation add no new context here.

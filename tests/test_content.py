@@ -72,16 +72,18 @@ class ContentTests(unittest.TestCase):
 
     def test_redundant_ui_copy_without_losing_needed_context(self):
         cases = {case['id']: case for case in json.loads((ROOT / 'tests/fixtures/rewrites.json').read_text())}
-        case = cases['frontend-redundancy']
-        self.assertEqual(validation.preservation_errors(case, case['after']), [])
-        self.assertIn('redundant UI copy remains',
-                      validation.preservation_errors(case, case['before']))
-        for token in case['preserve']:
-            with self.subTest(needed_context=token):
-                self.assertTrue(validation.preservation_errors(case, case['after'].replace(token, '', 1)))
-        unsupported = {**case, 'remove_redundant_copy': ['Missing heading']}
-        self.assertIn('redundancy fixture lacks unique source support',
-                      validation.preservation_errors(unsupported, case['after']))
+        for case_id in ('frontend-redundancy', 'about-overview'):
+            case = cases[case_id]
+            with self.subTest(case=case_id):
+                self.assertEqual(validation.preservation_errors(case, case['after']), [])
+                self.assertIn('redundant UI copy remains',
+                              validation.preservation_errors(case, case['before']))
+                for token in case['preserve']:
+                    with self.subTest(needed_context=token):
+                        self.assertTrue(validation.preservation_errors(case, case['after'].replace(token, '', 1)))
+                unsupported = {**case, 'remove_redundant_copy': ['Missing heading']}
+                self.assertIn('redundancy fixture lacks unique source support',
+                              validation.preservation_errors(unsupported, case['after']))
 
     def test_installation_and_explicit_invocation_routing(self):
         # Offline package smoke: temporary project installation, $name lookup,
