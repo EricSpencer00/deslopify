@@ -1,4 +1,4 @@
-name: Update README tree
+name: Update model catalog
 
 on:
   push:
@@ -26,16 +26,16 @@ jobs:
 
       - name: Check generated files on pull requests
         if: github.event_name == 'pull_request'
-        run: git diff --exit-code -- README.md deslopify/fac/_template/models deslopify/ne-fac/_template/models
+        run: git diff --exit-code -- README.md MODEL-CATALOG.md deslopify/fac/_template/models deslopify/ne-fac/_template/models
 
-      - name: Commit README changes
+      - name: Commit catalog changes
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- README.md deslopify/fac/_template/models deslopify/ne-fac/_template/models; then
+          if git diff --quiet -- README.md MODEL-CATALOG.md deslopify/fac/_template/models deslopify/ne-fac/_template/models; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md deslopify/fac/_template/models deslopify/ne-fac/_template/models
+          git add README.md MODEL-CATALOG.md deslopify/fac/_template/models deslopify/ne-fac/_template/models
           git commit -m "Update generated model slots"
           git push
