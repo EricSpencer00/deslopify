@@ -16,3 +16,7 @@ Never add technical terms or implementation details to a public-facing frontend 
 FamousMoji shop regression: `Swap album / Get That Yam Off Your Face / 2,554 Printify items · 53,634 / 53,634 rendered`.
 
 Remove the provider/catalog count and render accounting from the storefront, or move them to internal diagnostics. If album/artwork selection works, keep it in ordinary language, for example `Choose an album / Get That Yam Off Your Face`. Omit an unusable control; do not imply it works.
+
+Let photos, content, layout, and working interactions carry their meaning. Do not add titles, labels, or marketing copy merely to fill space or explain what they already communicate. Remove decorative headings and redundant UI narration.
+
+Keep copy that supplies needed context or navigation, accessible names and alt text, instructions, errors, product facts, and legal disclosures. A useful heading or label earns its place; minimalism is not a reason to remove it. See the before/after examples in [website copy](examples/website-copy.md).

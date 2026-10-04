@@ -10,6 +10,8 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   └── workflows/
 │       └── readme-tree.yml — CI update job
 ├── deslopify/
+│   ├── examples/
+│   │   └── website-copy.md — repository file
 │   ├── fac/
 │   │   └── _template/
 │   │       ├── models/ — company model slots
@@ -741,7 +743,13 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 │   └── SKILL.md — skill entrypoint
 ├── scripts/
 │   ├── sync_model_harnesses.py — provider-native model slot sync
-│   └── update_readme_tree.py — README tree generator
+│   ├── update_readme_tree.py — README tree generator
+│   └── validate_content.py — repository file
+├── tests/
+│   ├── fixtures/
+│   │   └── rewrites.json — repository file
+│   └── test_content.py — repository file
+├── .gitignore — repository file
 ├── LICENSE — license
 └── README.md — repository map
 ```

@@ -20,6 +20,8 @@ jobs:
           python-version: "3.x"
 
       - run: python3 scripts/sync_model_harnesses.py
+      - run: python3 scripts/validate_content.py
+      - run: python3 -m unittest discover -s tests -v
       - run: python3 scripts/update_readme_tree.py
 
       - name: Check generated files on pull requests

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "email",
+    "before": "Hi Maya, I hope this message finds you well. I wanted to reach out to ask if you could review the 12-page draft by Friday, 9 October. The draft is at https://example.org/draft. We may need another day for figures. Thanks, Arun.",
+    "after": "Hi Maya, could you review the 12-page draft by Friday, 9 October? The draft is at https://example.org/draft. We may need another day for figures. Thanks, Arun.",
+    "preserve": [
+      "Maya",
+      "Arun",
+      "Friday, 9 October",
+      "may need another day",
+      "review the 12-page draft by Friday, 9 October"
+    ],
+    "unchanged": false,
+    "intent": {
+      "source": "ask if you could review",
+      "candidate": "could you review"
+    }
+  },
+  {
+    "id": "website",
+    "before": "Meet LedgerBox, a powerful solution designed to empower your team. LedgerBox exports CSV reports for up to 20 projects. The beta may omit archived projects. Read https://example.org/limits before importing.",
+    "after": "LedgerBox exports CSV reports for up to 20 projects. The beta may omit archived projects. Read https://example.org/limits before importing.",
+    "preserve": [
+      "LedgerBox",
+      "CSV",
+      "up to 20 projects",
+      "beta may omit archived projects",
+      "exports CSV reports for up to 20 projects"
+    ],
+    "unchanged": false
+  },
+  {
+    "id": "frontend-diagnostics",
+    "context": "Storefront with a working album selector; the provider/catalog and rendering counters are internal diagnostics.",
+    "before": "Swap album / Get That Yam Off Your Face / 2,554 Printify items · 53,634 / 53,634 rendered",
+    "after": "Choose an album / Get That Yam Off Your Face",
+    "preserve": [
+      "Get That Yam Off Your Face"
+    ],
+    "unchanged": false,
+    "intent": {
+      "source": "Swap album",
+      "candidate": "Choose an album"
+    },
+    "remove_internal_diagnostics": [
+      "2,554 Printify items · 53,634 / 53,634 rendered"
+    ]
+  },
+  {
+    "id": "frontend-redundancy",
+    "context": "A product card already has the artwork photo, product heading, price, and a working purchase control. The alt text, size instruction, conditional stock error, and returns disclosure are required in their existing roles.",
+    "before": "Explore Our Stunning Collection\nArtwork Preview\nGet That Yam Off Your Face — 12 × 18 in matte poster.\nImage alt: Get That Yam Off Your Face album artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
+    "after": "Get That Yam Off Your Face — 12 × 18 in matte poster.\nImage alt: Get That Yam Off Your Face album artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
+    "preserve": [
+      "Get That Yam Off Your Face — 12 × 18 in matte poster.",
+      "Image alt: Get That Yam Off Your Face album artwork.",
+      "Choose a size before adding to cart.",
+      "Add to cart",
+      "This size is out of stock.",
+      "Returns accepted within 30 days."
+    ],
+    "unchanged": false,
+    "remove_redundant_copy": [
+      "Explore Our Stunning Collection",
+      "Artwork Preview"
+    ]
+  },
+  {
+    "id": "technical",
+    "before": "It is important to note that the cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. This underscores its transformative potential. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",
+    "after": "The cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",
+    "preserve": [
+      "p95",
+      "42 ms",
+      "31 ms",
+      "500-request sample",
+      "have not tested concurrent writes",
+      "cache invalidation may increase tail latency",
+      "reduced p95 latency from 42 ms to 31 ms"
+    ],
+    "unchanged": false
+  },
+  {
+    "id": "intentional-voice",
+    "before": "Yep, the queue ate my homework. I retried 3 jobs; 2 passed. The last one may need a timeout fix.",
+    "after": "Yep, the queue ate my homework. I retried 3 jobs; 2 passed. The last one may need a timeout fix.",
+    "preserve": [
+      "Yep, the queue ate my homework.",
+      "may need a timeout fix"
+    ],
+    "unchanged": true
+  },
+  {
+    "id": "already-good",
+    "before": "Ada fixed the race in compare-and-swap. Build 17 passes; ARM64 remains untested. See https://example.org/issue/17.",
+    "after": "Ada fixed the race in compare-and-swap. Build 17 passes; ARM64 remains untested. See https://example.org/issue/17.",
+    "preserve": [
+      "Ada",
+      "compare-and-swap",
+      "ARM64 remains untested"
+    ],
+    "unchanged": true
+  },
+  {
+    "id": "qualification",
+    "before": "Our estimate is 3.5 GB, approximately. It is worth noting that we did not measure peak RSS.",
+    "after": "Our estimate is approximately 3.5 GB. We did not measure peak RSS.",
+    "preserve": [
+      "estimate",
+      "approximately",
+      "3.5 GB",
+      "did not measure peak RSS"
+    ],
+    "unchanged": false
+  }
+]
