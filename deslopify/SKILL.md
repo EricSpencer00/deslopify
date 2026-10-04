@@ -9,9 +9,15 @@ For a known provider, also read its `general.md` under [fac models](fac/_templat
 
 Apply each rule only to its stated writing context and any named harness or setting. Do not infer a provider or model from the draft's style.
 
+## Write for the audience
+
+**DO NOT say things that do not matter to the audience.**
+
+Keep a detail only when it helps the reader understand the subject, make a decision, or take the intended action. A fact being true or available is not a reason to include it. Cut internal bookkeeping, process narration, unrelated history, and implementation details unless the audience needs them. Keep qualifications that materially affect the reader's decision; state them once, plainly.
+
 ## Public-facing frontend copy
 
-Never add technical terms or implementation details to a public-facing frontend unless they help the visitor understand, choose, or use the product. Preserve useful customer-facing specs, compatibility, limits, accessibility text, and required disclosures.
+Keep customer-facing specs and compatibility details when they affect a visitor's choice or use.
 
 Remove the provider/catalog count and render accounting from the storefront, or move them to internal diagnostics. If a design selector works, keep its label in ordinary language, for example `Choose a design`. Omit an unusable control; do not imply it works.
 

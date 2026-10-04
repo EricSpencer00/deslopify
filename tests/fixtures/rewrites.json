@@ -17,6 +17,26 @@
     }
   },
   {
+    "id": "audience-letter",
+    "context": "The accounts office needs the statement request, account reference, posted-payment date, and balance. Portal-export and spreadsheet preparation are true but irrelevant to fulfilling the request.",
+    "before": "Dear Accounts Office, I request an itemized statement for account REF-7. I downloaded the portal export and reorganized it in a spreadsheet to prepare this request. My current balance is $125.00. Please explain charges not covered by the payment posted on 4 October.",
+    "after": "Dear Accounts Office, please send an itemized statement for account REF-7 and explain charges not covered by the payment posted on 4 October. My current balance is $125.00.",
+    "preserve": [
+      "Accounts Office",
+      "REF-7",
+      "My current balance is $125.00.",
+      "charges not covered by the payment posted on 4 October"
+    ],
+    "intent": {
+      "source": "request an itemized statement",
+      "candidate": "send an itemized statement"
+    },
+    "unchanged": false,
+    "remove_redundant_copy": [
+      "I downloaded the portal export and reorganized it in a spreadsheet to prepare this request."
+    ]
+  },
+  {
     "id": "website",
     "before": "Meet LedgerBox, a powerful solution designed to empower your team. LedgerBox exports CSV reports for up to 20 projects. The beta may omit archived projects. Read https://example.org/limits before importing.",
     "after": "LedgerBox exports CSV reports for up to 20 projects. The beta may omit archived projects. Read https://example.org/limits before importing.",

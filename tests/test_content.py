@@ -70,9 +70,9 @@ class ContentTests(unittest.TestCase):
                 self.assertIn(case['intent']['candidate'], case['after'])
                 self.assertTrue(validation.preservation_errors(case, case['after'].replace(case['intent']['candidate'], '', 1)))
 
-    def test_redundant_ui_copy_without_losing_needed_context(self):
+    def test_audience_omissions_keep_needed_context(self):
         cases = {case['id']: case for case in json.loads((ROOT / 'tests/fixtures/rewrites.json').read_text())}
-        for case_id in ('frontend-redundancy', 'about-overview'):
+        for case_id in ('frontend-redundancy', 'about-overview', 'audience-letter'):
             case = cases[case_id]
             with self.subTest(case=case_id):
                 self.assertEqual(validation.preservation_errors(case, case['after']), [])
