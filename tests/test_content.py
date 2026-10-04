@@ -42,8 +42,8 @@ class ContentTests(unittest.TestCase):
         self.assertEqual(validation.preservation_errors(case, case['after']), [])
         for candidate in (
             case['before'],
-            case['after'] + ' / 53,634 rendered',
-            case['after'].replace('Choose an album', 'No albums available'),
+            case['after'] + ' / 240 rendered',
+            case['after'].replace('Choose a design', 'No designs available'),
         ):
             with self.subTest(candidate=candidate):
                 self.assertTrue(validation.preservation_errors(case, candidate))

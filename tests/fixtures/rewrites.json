@@ -31,29 +31,29 @@
   },
   {
     "id": "frontend-diagnostics",
-    "context": "Storefront with a working album selector; the provider/catalog and rendering counters are internal diagnostics.",
-    "before": "Swap album / Get That Yam Off Your Face / 2,554 Printify items · 53,634 / 53,634 rendered",
-    "after": "Choose an album / Get That Yam Off Your Face",
+    "context": "Storefront with a working design selector; provider/catalog and rendering counters are internal diagnostics.",
+    "before": "Swap design / Mountain print / Provider catalog: 120 items · 240 / 240 rendered",
+    "after": "Choose a design / Mountain print",
     "preserve": [
-      "Get That Yam Off Your Face"
+      "Mountain print"
     ],
     "unchanged": false,
     "intent": {
-      "source": "Swap album",
-      "candidate": "Choose an album"
+      "source": "Swap design",
+      "candidate": "Choose a design"
     },
     "remove_internal_diagnostics": [
-      "2,554 Printify items · 53,634 / 53,634 rendered"
+      "Provider catalog: 120 items · 240 / 240 rendered"
     ]
   },
   {
     "id": "frontend-redundancy",
     "context": "A product card already has the artwork photo, product heading, price, and a working purchase control. The alt text, size instruction, conditional stock error, and returns disclosure are required in their existing roles.",
-    "before": "Explore Our Stunning Collection\nArtwork Preview\nGet That Yam Off Your Face — 12 × 18 in matte poster.\nImage alt: Get That Yam Off Your Face album artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
-    "after": "Get That Yam Off Your Face — 12 × 18 in matte poster.\nImage alt: Get That Yam Off Your Face album artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
+    "before": "Explore Our Stunning Collection\nArtwork Preview\nMountain print — 12 × 18 in matte poster.\nImage alt: Snowy mountain artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
+    "after": "Mountain print — 12 × 18 in matte poster.\nImage alt: Snowy mountain artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
     "preserve": [
-      "Get That Yam Off Your Face — 12 × 18 in matte poster.",
-      "Image alt: Get That Yam Off Your Face album artwork.",
+      "Mountain print — 12 × 18 in matte poster.",
+      "Image alt: Snowy mountain artwork.",
       "Choose a size before adding to cart.",
       "Add to cart",
       "This size is out of stock.",
