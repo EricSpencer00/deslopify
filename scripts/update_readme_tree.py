@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep the repository tree in README.md in sync with the files on disk."""
+"""Keep MODEL-CATALOG.md in sync with the repository files on disk."""
 
 from __future__ import annotations
 
@@ -7,9 +7,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-README = ROOT / "README.md"
-START = "<!-- README TREE START -->"
-END = "<!-- README TREE END -->"
+CATALOG = ROOT / "MODEL-CATALOG.md"
+START = "<!-- CATALOG TREE START -->"
+END = "<!-- CATALOG TREE END -->"
 IGNORED = {".git", ".agents", "__pycache__"}
 MODEL_STATES = {"new", "available", "deprecated"}
 NEW_MODEL_NOTES = {
@@ -37,13 +37,15 @@ def repository_files() -> list[Path]:
 
 def file_note(path: Path) -> str:
     if path == Path("README.md"):
-        return "repository map"
+        return "purpose, installation, and usage"
+    if path == Path("MODEL-CATALOG.md"):
+        return "model catalog and repository map"
     if path == Path("LICENSE"):
         return "license"
     if path == Path("deslopify/SKILL.md"):
         return "skill entrypoint"
     if path == Path("scripts/update_readme_tree.py"):
-        return "README tree generator"
+        return "catalog generator"
     if path == Path("scripts/sync_model_harnesses.py"):
         return "provider-native model slot sync"
     if path == Path(".github/workflows/readme-tree.yml"):
@@ -125,8 +127,8 @@ def generated_section(files: list[Path]) -> str:
     return "\n".join(lines)
 
 
-def update_readme() -> None:
-    original = README.read_text()
+def update_catalog() -> None:
+    original = CATALOG.read_text()
     section = generated_section(repository_files())
     if START in original and END in original:
         before = original.split(START, 1)[0].rstrip()
@@ -135,9 +137,9 @@ def update_readme() -> None:
         if after:
             updated += f"\n\n{after}"
     else:
-        updated = f"{original.rstrip()}\n\n{section}\n"
-    README.write_text(updated)
+        updated = f"{original.rstrip()}\n\n{section}"
+    CATALOG.write_text(updated.rstrip() + "\n")
 
 
 if __name__ == "__main__":
-    update_readme()
+    update_catalog()

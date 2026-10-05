@@ -1,0 +1,180 @@
+[
+  {
+    "id": "email",
+    "before": "Hi Maya, I hope this message finds you well. I wanted to reach out to ask if you could review the 12-page draft by Friday, 9 October. The draft is at https://example.org/draft. We may need another day for figures. Thanks, Arun.",
+    "after": "Hi Maya, could you review the 12-page draft by Friday, 9 October? The draft is at https://example.org/draft. We may need another day for figures. Thanks, Arun.",
+    "preserve": [
+      "Maya",
+      "Arun",
+      "Friday, 9 October",
+      "may need another day",
+      "review the 12-page draft by Friday, 9 October"
+    ],
+    "unchanged": false,
+    "intent": {
+      "source": "ask if you could review",
+      "candidate": "could you review"
+    }
+  },
+  {
+    "id": "audience-letter",
+    "context": "The accounts office needs the statement request, account reference, posted-payment date, and balance. Portal-export and spreadsheet preparation are true but irrelevant to fulfilling the request.",
+    "before": "Dear Accounts Office, I request an itemized statement for account REF-7. I downloaded the portal export and reorganized it in a spreadsheet to prepare this request. My current balance is $125.00. Please explain charges not covered by the payment posted on 4 October.",
+    "after": "Dear Accounts Office, please send an itemized statement for account REF-7 and explain charges not covered by the payment posted on 4 October. My current balance is $125.00.",
+    "preserve": [
+      "Accounts Office",
+      "REF-7",
+      "My current balance is $125.00.",
+      "charges not covered by the payment posted on 4 October"
+    ],
+    "intent": {
+      "source": "request an itemized statement",
+      "candidate": "send an itemized statement"
+    },
+    "unchanged": false,
+    "remove_redundant_copy": [
+      "I downloaded the portal export and reorganized it in a spreadsheet to prepare this request."
+    ]
+  },
+  {
+    "id": "website",
+    "before": "Meet LedgerBox, a powerful solution designed to empower your team. LedgerBox exports CSV reports for up to 20 projects. The beta may omit archived projects. Read https://example.org/limits before importing.",
+    "after": "LedgerBox exports CSV reports for up to 20 projects. The beta may omit archived projects. Read https://example.org/limits before importing.",
+    "preserve": [
+      "LedgerBox",
+      "CSV",
+      "up to 20 projects",
+      "beta may omit archived projects",
+      "exports CSV reports for up to 20 projects"
+    ],
+    "unchanged": false
+  },
+  {
+    "id": "frontend-diagnostics",
+    "context": "Storefront with a working design selector; provider/catalog and rendering counters are internal diagnostics.",
+    "before": "Swap design / Mountain print / Provider catalog: 120 items · 240 / 240 rendered",
+    "after": "Choose a design / Mountain print",
+    "preserve": [
+      "Mountain print"
+    ],
+    "unchanged": false,
+    "intent": {
+      "source": "Swap design",
+      "candidate": "Choose a design"
+    },
+    "remove_internal_diagnostics": [
+      "Provider catalog: 120 items · 240 / 240 rendered"
+    ]
+  },
+  {
+    "id": "frontend-redundancy",
+    "context": "A product card already has the artwork photo, product heading, price, and a working purchase control. The alt text, size instruction, conditional stock error, and returns disclosure are required in their existing roles.",
+    "before": "Explore Our Stunning Collection\nArtwork Preview\nMountain print — 12 × 18 in matte poster.\nImage alt: Snowy mountain artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
+    "after": "Mountain print — 12 × 18 in matte poster.\nImage alt: Snowy mountain artwork.\nChoose a size before adding to cart.\nAdd to cart\nThis size is out of stock.\nReturns accepted within 30 days.",
+    "preserve": [
+      "Mountain print — 12 × 18 in matte poster.",
+      "Image alt: Snowy mountain artwork.",
+      "Choose a size before adding to cart.",
+      "Add to cart",
+      "This size is out of stock.",
+      "Returns accepted within 30 days."
+    ],
+    "unchanged": false,
+    "remove_redundant_copy": [
+      "Explore Our Stunning Collection",
+      "Artwork Preview"
+    ]
+  },
+  {
+    "id": "about-overview",
+    "context": "The header already identifies Studio and links to Work, Team, and Contact. Keep the page heading for navigation and its factual ownership, contact, and privacy information.",
+    "before": "Studio\nAbout\nA creative home for meaningful experiences.\nOur work\nBrowse the projects, learn about the team, and get in touch.\nEmployee-owned design studio.\nContact hello@example.org.\nWe do not sell personal data.",
+    "after": "About\nEmployee-owned design studio.\nContact hello@example.org.\nWe do not sell personal data.",
+    "preserve": [
+      "About",
+      "Employee-owned design studio.",
+      "Contact hello@example.org.",
+      "We do not sell personal data."
+    ],
+    "unchanged": false,
+    "remove_redundant_copy": [
+      "Studio\n",
+      "A creative home for meaningful experiences.",
+      "Our work\n",
+      "Browse the projects, learn about the team, and get in touch."
+    ]
+  },
+  {
+    "id": "obsolete-notice",
+    "context": "Current navigation already reaches the requested content; there is no required migration action, data loss, compatibility change, or service impact to explain.",
+    "before": "The older pages of this site now live on the home page. Start there.",
+    "after": "",
+    "preserve": [],
+    "unchanged": false,
+    "omit_entirely": true,
+    "remove_redundant_copy": [
+      "The older pages of this site now live on the home page. Start there."
+    ]
+  },
+  {
+    "id": "migration-warning",
+    "context": "This migration requires an export to avoid data loss, a client upgrade for compatibility, and planning around an upload outage. Those notices are needed for user action.",
+    "before": "Export your files by 12 October. Files not exported will be deleted. Version 1 clients stop working after the migration. Uploads will be unavailable from 01:00 to 02:00 UTC.",
+    "after": "Export your files by 12 October. Files not exported will be deleted. Version 1 clients stop working after the migration. Uploads will be unavailable from 01:00 to 02:00 UTC.",
+    "preserve": [
+      "Export your files by 12 October.",
+      "Files not exported will be deleted.",
+      "Version 1 clients stop working after the migration.",
+      "Uploads will be unavailable from 01:00 to 02:00 UTC."
+    ],
+    "unchanged": true
+  },
+  {
+    "id": "technical",
+    "before": "It is important to note that the cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. This underscores its transformative potential. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",
+    "after": "The cache reduced p95 latency from 42 ms to 31 ms in our 500-request sample. We have not tested concurrent writes; cache invalidation may increase tail latency. See https://example.org/bench.",
+    "preserve": [
+      "p95",
+      "42 ms",
+      "31 ms",
+      "500-request sample",
+      "have not tested concurrent writes",
+      "cache invalidation may increase tail latency",
+      "reduced p95 latency from 42 ms to 31 ms"
+    ],
+    "unchanged": false
+  },
+  {
+    "id": "intentional-voice",
+    "before": "Yep, the queue ate my homework. I retried 3 jobs; 2 passed. The last one may need a timeout fix.",
+    "after": "Yep, the queue ate my homework. I retried 3 jobs; 2 passed. The last one may need a timeout fix.",
+    "preserve": [
+      "Yep, the queue ate my homework.",
+      "may need a timeout fix"
+    ],
+    "unchanged": true
+  },
+  {
+    "id": "already-good",
+    "before": "Ada fixed the race in compare-and-swap. Build 17 passes; ARM64 remains untested. See https://example.org/issue/17.",
+    "after": "Ada fixed the race in compare-and-swap. Build 17 passes; ARM64 remains untested. See https://example.org/issue/17.",
+    "preserve": [
+      "Ada",
+      "compare-and-swap",
+      "ARM64 remains untested"
+    ],
+    "unchanged": true
+  },
+  {
+    "id": "qualification",
+    "before": "Our estimate is 3.5 GB, approximately. It is worth noting that we did not measure peak RSS.",
+    "after": "Our estimate is approximately 3.5 GB. We did not measure peak RSS.",
+    "preserve": [
+      "estimate",
+      "approximately",
+      "3.5 GB",
+      "did not measure peak RSS"
+    ],
+    "unchanged": false
+  }
+]
