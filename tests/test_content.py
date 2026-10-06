@@ -112,7 +112,9 @@ class ContentTests(unittest.TestCase):
             skill_name = prompt.split()[0][1:]
             resolved = installed.parent / skill_name
             visited = validation.validate_skill(resolved)
-            self.assertEqual(len(visited), 4)
+            for reference in ('fac/_template/general.md', 'ne-fac/_template/general.md',
+                              'references/rule-index.md', 'references/rule-index.json'):
+                self.assertIn((resolved / reference).resolve(), visited)
             self.assertIn((resolved / 'examples/website-copy.md').resolve(), visited)
             (resolved / 'examples/website-copy.md').write_text('')
             with self.assertRaises(ValueError):

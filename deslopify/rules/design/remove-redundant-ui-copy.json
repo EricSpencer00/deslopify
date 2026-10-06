@@ -1,0 +1,16 @@
+{
+  "id": "remove-redundant-ui-copy",
+  "title": "Let layout and content communicate",
+  "category": "design",
+  "direction": "dont",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Public-facing frontend copy",
+  "rule": "Let photos, content, layout, and working interactions carry their meaning. Do not add titles, labels, or marketing copy merely to fill space or explain what they already communicate. Remove decorative headings and redundant UI narration.",
+  "example": "Mountain print — 12 × 18 in matte poster. / Choose a size before adding to cart. / Add to cart",
+  "counterexample": "Explore Our Stunning Collection / Artwork Preview / Mountain print — 12 × 18 in matte poster. / Choose a size before adding to cart. / Add to cart",
+  "rationale": "Redundant labels compete with the useful content and controls.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

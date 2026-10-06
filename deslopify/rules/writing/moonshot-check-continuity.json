@@ -1,0 +1,16 @@
+{
+  "id": "moonshot-check-continuity",
+  "title": "Check scene continuity",
+  "category": "writing",
+  "direction": "do",
+  "scope": "model",
+  "company": "moonshot",
+  "model": "kimi-k2-thinking",
+  "model_state": "available",
+  "context": "Fiction — Kimi K2 Thinking · LM Arena",
+  "rule": "Check continuity before continuing a scene.",
+  "example": "Continue from the locked door established in the previous paragraph.",
+  "counterexample": "Have the character walk through that locked door without explanation.",
+  "rationale": "A continuation should respect the established scene.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/models/moonshot/available/kimi-k2-thinking.md`. Examples are illustrative."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "cut-repetition",
+  "title": "Delete repetition",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Delete repetition that adds no information. Nothing in a single slide should be filler for things that have already been said, especially titles and visual metadata.",
+  "example": "The result appears once, where the argument needs it.",
+  "counterexample": "Repeat the result in the slide title, subtitle, chart label, and closing sentence.",
+  "rationale": "Repetition uses attention without adding information.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/general.md`. Examples are illustrative."
+}

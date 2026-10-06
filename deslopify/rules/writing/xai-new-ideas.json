@@ -1,0 +1,16 @@
+{
+  "id": "xai-new-ideas",
+  "title": "Give new ideas when asked",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "company",
+  "company": "xai",
+  "model": null,
+  "model_state": null,
+  "context": "Fiction",
+  "rule": "When asked for new ideas, do not recycle the same three.",
+  "example": "After suggesting a heist, a reunion, and a trial, suggest an expedition when asked for another idea.",
+  "counterexample": "Repeat the heist, reunion, and trial as the only choices.",
+  "rationale": "A request for new ideas needs additional possibilities.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/xai/general.md`. Examples are illustrative."
+}

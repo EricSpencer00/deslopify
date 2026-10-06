@@ -3,6 +3,12 @@ remove AI-generated -isms from your emails, website designs, or "[slop-grenades]
 
 Start with [the skill](deslopify/SKILL.md) or [the website-copy examples](deslopify/examples/website-copy.md).
 
+## Add a do or don't
+
+[Fill out the rule form](https://github.com/EricSpencer00/deslopify/issues/new?template=rule.yml) with one example and one counterexample. Choose **writing**, **taste**, or **design**, and whether it applies to **all models**, **one company**, or **one model**. You can also use it to change an existing rule.
+
+[Browse the rules](deslopify/references/rule-index.md) or read [how contributions become skill updates](CONTRIBUTING.md).
+
 ## Install and use
 
 Copy the complete `deslopify/` folder into your project's `.agents/skills/deslopify/` directory. Keep its subfolders so linked guidance resolves.

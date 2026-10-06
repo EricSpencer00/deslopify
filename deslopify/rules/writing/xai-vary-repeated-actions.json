@@ -1,0 +1,16 @@
+{
+  "id": "xai-vary-repeated-actions",
+  "title": "Avoid repeated conversation actions",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "company",
+  "company": "xai",
+  "model": null,
+  "model_state": null,
+  "context": "Conversation",
+  "rule": "Do not repeat the same action or closing question across turns.",
+  "example": "Answer the requested follow-up and stop when no further question is useful.",
+  "counterexample": "End every turn with the same action and “What do you think?”",
+  "rationale": "A repeated action or question should not become the response template.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/xai/general.md`. Examples are illustrative."
+}

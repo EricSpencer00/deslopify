@@ -1,0 +1,16 @@
+{
+  "id": "minimax-preserve-distinct-passages",
+  "title": "Keep distinct passages distinct",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "minimax",
+  "model": "minimax-m3",
+  "model_state": "available",
+  "context": "Fiction — MiniMax M3",
+  "rule": "Do not flatten distinct passages into the same dry phrasing.",
+  "example": "Keep one narrator’s spare tone and another’s exuberant cadence.",
+  "counterexample": "Rewrite both narrators into identical short, dry statements.",
+  "rationale": "Editing should not erase the differences between voices.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/minimax/available/minimax-m3.md`. Examples are illustrative."
+}

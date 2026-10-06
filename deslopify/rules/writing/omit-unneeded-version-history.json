@@ -1,0 +1,16 @@
+{
+  "id": "omit-unneeded-version-history",
+  "title": "Omit unneeded version history",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Public-facing frontend copy",
+  "rule": "Omit history about old versions, retired pages, migrations, or redesigns when users can use the current experience without it, especially in prominent notices. Prefer the current action or a transparent redirect. Keep migration notices needed for user action, data loss, compatibility, or service impact.",
+  "example": "Current navigation works, so omit the old-pages notice. Keep “Export your data by June 30 to avoid losing access” when action is required.",
+  "counterexample": "The older pages of this site now live on the home page. Start there.",
+  "rationale": "Keep notices when they communicate an actual consequence or required action.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

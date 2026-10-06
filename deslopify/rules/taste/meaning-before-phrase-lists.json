@@ -1,0 +1,16 @@
+{
+  "id": "meaning-before-phrase-lists",
+  "title": "Choose words for their meaning",
+  "category": "taste",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Any writing",
+  "rule": "Choose wording for meaning, not for a stock phrase checklist.",
+  "example": "Keep “robust” when it describes resistance to outliers and the analysis supports it.",
+  "counterexample": "Remove “robust” solely because it appears on a list of AI words.",
+  "rationale": "A phrase list does not determine whether wording serves the reader.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/general.md`. Examples are illustrative."
+}

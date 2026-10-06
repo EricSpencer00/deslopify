@@ -1,0 +1,17 @@
+name: Tooling bug or question
+description: Report a problem with installation, forms, generated rules, or automation.
+title: "[Tooling] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened, or what do you need help with?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce or relevant context
+      description: Include expected behavior and any relevant public links. Do not include secrets.
+    validations:
+      required: true

@@ -1,0 +1,16 @@
+{
+  "id": "support-vague-claims",
+  "title": "Make claims concrete",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Use a supported number or example when it makes a vague claim clearer.",
+  "example": "Median response time fell from 80 ms to 45 ms in this test.",
+  "counterexample": "This approach delivers incredible performance.",
+  "rationale": "A supported detail lets the reader judge the claim.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/general.md`. Examples are illustrative."
+}

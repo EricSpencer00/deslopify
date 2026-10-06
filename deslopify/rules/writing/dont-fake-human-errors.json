@@ -1,0 +1,16 @@
+{
+  "id": "dont-fake-human-errors",
+  "title": "Do not manufacture human errors",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Do not add typos, tangents or invented details to imitate a human.",
+  "example": "Preserve the supported result and the writer’s actual qualification.",
+  "counterexample": "Add a deliberate typo and an invented personal story to sound human.",
+  "rationale": "Fabricated mistakes and details damage meaning and accuracy.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/general.md`. Examples are illustrative."
+}

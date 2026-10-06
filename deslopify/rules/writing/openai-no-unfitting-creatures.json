@@ -1,0 +1,16 @@
+{
+  "id": "openai-no-unfitting-creatures",
+  "title": "Use creature metaphors only when they fit",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "company",
+  "company": "openai",
+  "model": null,
+  "model_state": null,
+  "context": "Any writing",
+  "rule": "Do not add creature metaphors unless they fit the author’s meaning. Ex. Goblins",
+  "example": "Keep the goblin in a fantasy scene that already features goblins.",
+  "counterexample": "Add “the latency goblin” to a plain performance report.",
+  "rationale": "A metaphor should fit the writer’s meaning and context.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/openai/general.md`. Examples are illustrative."
+}

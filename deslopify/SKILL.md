@@ -1,30 +1,28 @@
 ---
 name: deslopify
-description: Apply reviewed dos and don'ts to remove filler and generic phrasing from writing, with provider and model-specific guidance.
+description: Apply reviewed writing, taste, and design dos and don'ts, with company and model-specific guidance, to reader-facing prose and interfaces.
 ---
+
+## Pick the relevant rules
 
 Read [fac — dos](fac/_template/general.md) and [ne fac — don'ts](ne-fac/_template/general.md).
 
-For a known provider, also read its `general.md` under [fac models](fac/_template/models/) and [ne fac models](ne-fac/_template/models/). Read the matching model file in `new/`, `available/` or `deprecated/` when the model is known. Empty files have no rules.
+Use **writing** rules for wording, structure, and meaning; **taste** rules for stated aesthetic preferences; **design** rules for layout, visuals, and interactions. Apply only the categories and contexts needed for the user's task. A taste preference is not a universal correctness test.
 
-Apply each rule only to its stated writing context and any named harness or setting. Do not infer a provider or model from the draft's style.
+For a known company, also read its `general.md` under [fac models](fac/_template/models/) and [ne fac models](ne-fac/_template/models/). For a known model, read its matching file in `new/`, `available/`, or `deprecated/`. Empty files are unused slots, not guidance. Catalog states organize files; they do not establish current model availability.
 
-## Write for the audience
+Apply all-model rules plus matching company and model rules. Respect the task, audience, and any named harness or setting. Do not infer a company or model from a draft's style or extend a model observation to every model.
 
-**DO NOT say things that do not matter to the audience.**
+Each rule has an ID, scope, context, and illustrative example pair. **The example follows the rule; the counterexample breaks it**, including for don'ts. Preserve the author's meaning, useful facts, qualifications, and voice. Keep useful UI labels, accessible names, instructions, errors, product facts, and required disclosures.
 
-Keep a detail only when it helps the reader understand the subject, make a decision, or take the intended action. A fact being true or available is not a reason to include it. Cut internal bookkeeping, process narration, unrelated history, and implementation details unless the audience needs them. Keep qualifications that materially affect the reader's decision; state them once, plainly.
+## Find or maintain a rule
 
-## Public-facing frontend copy
+Use the [rule index](references/rule-index.md) to locate an ID. For a compact selection, run the installed helper:
 
-Keep customer-facing specs and compatibility details when they affect a visitor's choice or use.
+```sh
+python3 <skill-directory>/scripts/rules.py select --category writing --company openai --model gpt-6.1-sol
+```
 
-Remove the provider/catalog count and render accounting from the storefront, or move them to internal diagnostics. If a design selector works, keep its label in ordinary language, for example `Choose a design`. Omit an unusable control; do not imply it works.
+Omit company/model for all-model rules only. `--format json` returns structured records. The [machine index](references/rule-index.json) includes source and reading-file paths; the canonical records live in `rules/<category>/<id>.json`. Edit records, then run `scripts/rules.py render`; generated reading files will be rebuilt. Repository maintainers can also use the rule issue form and GitHub Actions to propose changes.
 
-Let photos, content, layout, and working interactions carry their meaning. Do not add titles, labels, or marketing copy merely to fill space or explain what they already communicate. Remove decorative headings and redundant UI narration.
-
-About and overview pages should answer a reader's actual questions, not narrate the navigation. Skip repeated brand-name heroes, vague mission/tagline filler, and tours of every section; keep concrete identity, ownership, contact, and policy facts where they help the reader.
-
-Omit history about old versions, retired pages, migrations, or redesigns when users can use the current experience without it, especially in prominent notices. Prefer the current action or a transparent redirect. Keep migration notices needed for user action, data loss, compatibility, or service impact.
-
-Keep copy that supplies needed context or navigation, accessible names and alt text, instructions, errors, product facts, and legal disclosures. A useful heading or label earns its place; minimalism is not a reason to remove it. See the before/after examples in [website copy](examples/website-copy.md).
+For public-facing copy, see the before/after [website-copy examples](examples/website-copy.md).

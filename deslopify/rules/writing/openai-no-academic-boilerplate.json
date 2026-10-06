@@ -1,0 +1,16 @@
+{
+  "id": "openai-no-academic-boilerplate",
+  "title": "Preserve specific academic prose",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "openai",
+  "model": "gpt-5.5",
+  "model_state": "new",
+  "context": "Paper writing — GPT-5.5",
+  "rule": "Do not replace academic prose with boilerplate.",
+  "example": "The sample contained 42 participants; the small size limits generalization.",
+  "counterexample": "In today’s rapidly evolving world, this study sheds light on an important topic.",
+  "rationale": "Specific claims and limitations carry the argument.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/openai/new/gpt-5.5.md`. Examples are illustrative."
+}
