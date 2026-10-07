@@ -7,8 +7,11 @@ import json
 from pathlib import Path
 import re
 from collections import Counter
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'deslopify/scripts'))
+import rules
 
 
 def preservation_errors(case, candidate):
@@ -76,13 +79,14 @@ def validate_skill(root):
 
 
 def main():
+    records = rules.load_rules(ROOT / 'deslopify')
     visited = validate_skill(ROOT / 'deslopify')
     cases = json.loads((ROOT / 'tests/fixtures/rewrites.json').read_text())
     for case in cases:
         errors = preservation_errors(case, case['after'])
         if errors:
             raise ValueError(f"{case['id']}: {errors}")
-    print(f'Validated {len(visited)} linked guidance files and {len(cases)} preservation fixtures.')
+    print(f'Validated {len(records)} rules, {len(visited)} linked guidance files, and {len(cases)} preservation fixtures.')
 
 
 if __name__ == '__main__':

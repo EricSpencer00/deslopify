@@ -1,0 +1,16 @@
+{
+  "id": "dont-repeat-aphorisms",
+  "title": "Avoid automatic aphorism endings",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Any writing",
+  "rule": "Do not end every paragraph by restating its point as an aphorism.",
+  "example": "End the paragraph after the result and its needed limitation.",
+  "counterexample": "Append “Ultimately, progress is the art of possibility” after every paragraph.",
+  "rationale": "A repeated closing flourish adds little information.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/general.md`. Examples are illustrative."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "preserve-author-voice",
+  "title": "Preserve the author’s voice",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Keep the author’s voice while making the requested edits.",
+  "example": "Keep “I built this to make mornings easier” while correcting an unclear reference.",
+  "counterexample": "Replace it with “We are delighted to empower productive daily workflows.”",
+  "rationale": "Editing should preserve the writer’s intended voice.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/general.md`. Examples are illustrative."
+}

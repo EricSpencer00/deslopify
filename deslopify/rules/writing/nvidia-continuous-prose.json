@@ -1,0 +1,16 @@
+{
+  "id": "nvidia-continuous-prose",
+  "title": "Keep continuous prose continuous",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "nvidia",
+  "model": "llama-3.1-nemotron-70b",
+  "model_state": "deprecated",
+  "context": "Fiction — Llama-3.1-Nemotron-70B · HuggingChat",
+  "rule": "Do not insert headings or continuation menus into continuous prose.",
+  "example": "Continue the story with the next paragraph.",
+  "counterexample": "Insert “Chapter summary” and a menu of continuation options inside the scene.",
+  "rationale": "Unrequested scaffolding interrupts the passage.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/nvidia/deprecated/llama-3.1-nemotron-70b.md`. Examples are illustrative."
+}

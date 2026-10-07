@@ -1,0 +1,16 @@
+{
+  "id": "deepseek-edit-without-inflation",
+  "title": "Make the requested edit without inflation",
+  "category": "writing",
+  "direction": "do",
+  "scope": "company",
+  "company": "deepseek",
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Make the requested edits without adding confidence or duplicating words.",
+  "example": "Change “might lower latency” to “may lower latency” when asked to simplify wording.",
+  "counterexample": "Change it to “certainly dramatically lowers latency” without new evidence.",
+  "rationale": "An edit should not strengthen an unsupported claim.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/models/deepseek/general.md`. Examples are illustrative."
+}

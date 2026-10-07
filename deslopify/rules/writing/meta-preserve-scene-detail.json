@@ -1,0 +1,16 @@
+{
+  "id": "meta-preserve-scene-detail",
+  "title": "Preserve scene detail as context grows",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "meta",
+  "model": "llama-3.3-70b",
+  "model_state": "deprecated",
+  "context": "Fiction — Llama 3.3 70B",
+  "rule": "Do not replace scene-specific detail with generic description as context grows.",
+  "example": "Keep the cracked blue cup beside the window in the later description.",
+  "counterexample": "Replace the established room with “a place filled with memories.”",
+  "rationale": "Specific continuity should survive a longer context.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/meta/deprecated/llama-3.3-70b.md`. Examples are illustrative."
+}

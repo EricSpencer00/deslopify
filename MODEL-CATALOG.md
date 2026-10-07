@@ -6,8 +6,13 @@
 ```text
 .
 ├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug.yml — tooling bug and question form
+│   │   ├── config.yml — issue chooser configuration
+│   │   └── rule.yml — do/don't contribution form
 │   └── workflows/
-│       └── readme-tree.yml — CI update job
+│       ├── readme-tree.yml — CI update job
+│       └── rule-proposal.yml — validate issues and propose add/change PRs
 ├── deslopify/
 │   ├── examples/
 │   │   └── website-copy.md — repository file
@@ -739,16 +744,64 @@
 │   │       │       │   └── glm-5.3.md
 │   │       │       └── general.md — company guidance
 │   │       └── general.md — all-model guidance
+│   ├── references/
+│   │   ├── rule-index.json — machine-readable rule index
+│   │   └── rule-index.md — browsable rule index
+│   ├── rules/ — canonical writing, taste, and design records
+│   │   ├── design/
+│   │   │   ├── preserve-needed-ui-copy.json — canonical rule record
+│   │   │   └── remove-redundant-ui-copy.json — canonical rule record
+│   │   ├── taste/
+│   │   │   └── meaning-before-phrase-lists.json — canonical rule record
+│   │   └── writing/
+│   │       ├── about-pages-answer-questions.json — canonical rule record
+│   │       ├── alibaba-dont-repeat-taglines.json — canonical rule record
+│   │       ├── anthropic-concrete-fiction-details.json — canonical rule record
+│   │       ├── anthropic-dont-invent-experiences.json — canonical rule record
+│   │       ├── anthropic-plain-technical-language.json — canonical rule record
+│   │       ├── argument-led-length.json — canonical rule record
+│   │       ├── audience-relevant-details.json — canonical rule record
+│   │       ├── cohere-retain-character-details.json — canonical rule record
+│   │       ├── cut-repetition.json — canonical rule record
+│   │       ├── deepseek-edit-without-inflation.json — canonical rule record
+│   │       ├── dont-diagnose-authorship-by-polish.json — canonical rule record
+│   │       ├── dont-fake-human-errors.json — canonical rule record
+│   │       ├── dont-repeat-aphorisms.json — canonical rule record
+│   │       ├── google-dont-add-stock-fiction.json — canonical rule record
+│   │       ├── meta-preserve-scene-detail.json — canonical rule record
+│   │       ├── minimax-preserve-distinct-passages.json — canonical rule record
+│   │       ├── mistral-distinct-alternatives.json — canonical rule record
+│   │       ├── moonshot-check-continuity.json — canonical rule record
+│   │       ├── nvidia-continuous-prose.json — canonical rule record
+│   │       ├── omit-unneeded-version-history.json — canonical rule record
+│   │       ├── openai-no-academic-boilerplate.json — canonical rule record
+│   │       ├── openai-no-unfitting-creatures.json — canonical rule record
+│   │       ├── openai-no-unrelated-creatures.json — canonical rule record
+│   │       ├── preserve-author-voice.json — canonical rule record
+│   │       ├── public-copy-without-diagnostics.json — canonical rule record
+│   │       ├── support-vague-claims.json — canonical rule record
+│   │       ├── useful-product-specs.json — canonical rule record
+│   │       ├── xai-new-ideas.json — canonical rule record
+│   │       ├── xai-vary-repeated-actions.json — canonical rule record
+│   │       └── z-ai-preserve-dialogue-conventions.json — canonical rule record
+│   ├── scripts/
+│   │   └── rules.py — validate, generate, and select rules
 │   └── SKILL.md — skill entrypoint
 ├── scripts/
+│   ├── propose_rule.py — issue-form parser and add/change helper
+│   ├── rule_pull_request.py — issue-to-PR Actions entrypoint
 │   ├── sync_model_harnesses.py — provider-native model slot sync
 │   ├── update_readme_tree.py — catalog generator
 │   └── validate_content.py — repository file
 ├── tests/
 │   ├── fixtures/
 │   │   └── rewrites.json — repository file
-│   └── test_content.py — repository file
+│   ├── test_content.py — repository file
+│   ├── test_rule_pull_request.py — repository file
+│   └── test_rules.py — repository file
 ├── .gitignore — repository file
+├── AGENTS.md — agent maintenance guide
+├── CONTRIBUTING.md — rule form, example pair, and Actions workflow
 ├── LICENSE — license
 ├── MODEL-CATALOG.md — model catalog and repository map
 └── README.md — purpose, installation, and usage

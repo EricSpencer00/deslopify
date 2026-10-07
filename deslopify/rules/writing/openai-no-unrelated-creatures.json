@@ -1,0 +1,16 @@
+{
+  "id": "openai-no-unrelated-creatures",
+  "title": "Avoid unrelated creature metaphors",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "openai",
+  "model": "gpt-5.4",
+  "model_state": "available",
+  "context": "Any writing — GPT-5.4 Thinking · historical Nerdy personality",
+  "rule": "Do not introduce goblins or other creature metaphors into unrelated prose.",
+  "example": "The build failed because a dependency is missing.",
+  "counterexample": "A dependency goblin sabotaged the build.",
+  "rationale": "The metaphor distracts from the actual cause.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/openai/available/gpt-5.4.md`. Examples are illustrative."
+}

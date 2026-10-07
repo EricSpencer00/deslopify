@@ -1,0 +1,16 @@
+{
+  "id": "anthropic-plain-technical-language",
+  "title": "Keep technical explanations plain",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "company",
+  "company": "anthropic",
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Do not turn a plain technical explanation into poetic jargon.",
+  "example": "The cache reuses results from earlier requests.",
+  "counterexample": "The cache is a symphony of remembered possibility.",
+  "rationale": "Concrete language explains the mechanism.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/anthropic/general.md`. Examples are illustrative."
+}

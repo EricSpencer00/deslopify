@@ -1,0 +1,16 @@
+{
+  "id": "audience-relevant-details",
+  "title": "Keep details that matter to the audience",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Any reader-facing writing",
+  "rule": "**DO NOT say things that do not matter to the audience.**\n\nKeep a detail only when it helps the reader understand the subject, make a decision, or take the intended action. A fact being true or available is not a reason to include it. Cut internal bookkeeping, process narration, unrelated history, and implementation details unless the audience needs them. Keep qualifications that materially affect the reader's decision; state them once, plainly.",
+  "example": "The letter gives the applicant’s relevant experience and the requested next step.",
+  "counterexample": "The letter narrates internal draft filenames and revision counters.",
+  "rationale": "Readers need details that support understanding, decisions, or action.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

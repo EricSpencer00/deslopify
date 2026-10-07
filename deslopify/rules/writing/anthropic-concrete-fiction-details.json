@@ -1,0 +1,16 @@
+{
+  "id": "anthropic-concrete-fiction-details",
+  "title": "Use concrete details instead of recurring weight metaphors",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "company",
+  "company": "anthropic",
+  "model": null,
+  "model_state": null,
+  "context": "Fiction",
+  "rule": "Do not substitute recurring weight metaphors for a concrete description.",
+  "example": "Her fingers tightened around the unsigned letter.",
+  "counterexample": "The weight of the moment weighed heavily with the weight of memory.",
+  "rationale": "Scene-specific actions communicate more than repeated metaphors.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/anthropic/general.md`. Examples are illustrative."
+}

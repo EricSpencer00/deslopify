@@ -1,0 +1,118 @@
+name: Suggest or change a do / don't
+description: Share a writing, taste, or design rule with one example and one counterexample.
+title: "[Rule] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One rule per issue. [Browse existing rules](https://github.com/EricSpencer00/deslopify/blob/main/deslopify/references/rule-index.md) or read the [contribution guide](https://github.com/EricSpencer00/deslopify/blob/main/CONTRIBUTING.md).
+        An example **follows** the rule; a counterexample **breaks** it, even for a don't.
+  - type: dropdown
+    id: change
+    attributes:
+      label: Change
+      options: [Add a rule, Change a rule]
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: rule-id
+    attributes:
+      label: Rule ID
+      description: A short lowercase name with hyphens. For a change, copy the existing ID from the rule index.
+      placeholder: avoid-empty-superlatives
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Rule title
+      placeholder: Replace empty praise with a concrete benefit
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Writing is wording/structure; taste is an aesthetic preference; design is layout, visuals, or interaction.
+      options: [Writing, Taste, Design]
+    validations:
+      required: true
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Direction
+      options: [Do, "Don't"]
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Applies to
+      description: Choose the narrowest scope your observation supports. One model's behavior is not evidence about every model.
+      options: [All models, One company, One model]
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: company
+    attributes:
+      label: Company
+      description: Required for One company or One model. Use its folder name, such as openai, anthropic, google, or z-ai. Leave blank for All models.
+      placeholder: openai
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Required only for One model. Give the exact model ID; leave blank otherwise.
+      placeholder: gpt-6.1-sol
+  - type: textarea
+    id: context
+    attributes:
+      label: When does this apply?
+      description: Name the task, audience, and any relevant app, harness, quantization, or setting. Include exceptions.
+      placeholder: Product descriptions; keep specifications and required disclosures.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: The rule
+      description: One actionable do or don't. State what should happen.
+      placeholder: Replace unsupported praise with a specific benefit the product actually offers.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example that follows the rule
+      description: One concrete sentence, snippet, screenshot, or layout description showing the desired result.
+      placeholder: Export all invoices as a CSV file.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: counterexample
+    attributes:
+      label: Counterexample that breaks the rule
+      description: One comparable example showing the problem. For a don't, this shows the unwanted behavior.
+      placeholder: Unlock an incredible, seamless invoice experience.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this useful?
+      description: Explain the reader or user benefit. Distinguish a personal preference from an observed failure.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or links (optional)
+      description: Public sources or reproducible observations. Label invented examples as illustrative; avoid private prompts or personal information.
+      render: text

@@ -1,0 +1,16 @@
+{
+  "id": "z-ai-preserve-dialogue-conventions",
+  "title": "Preserve dialogue conventions",
+  "category": "writing",
+  "direction": "do",
+  "scope": "model",
+  "company": "z-ai",
+  "model": "glm-5.1",
+  "model_state": "deprecated",
+  "context": "Fiction — GLM 5.1 · Venice",
+  "rule": "Preserve punctuation and dialogue conventions across turns.",
+  "example": "Keep the passage’s quotation marks and speaker paragraph breaks.",
+  "counterexample": "Switch quotation marks to dialogue dashes halfway through the scene.",
+  "rationale": "Consistent conventions help readers follow the dialogue.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/models/z-ai/deprecated/glm-5.1.md`. Examples are illustrative."
+}

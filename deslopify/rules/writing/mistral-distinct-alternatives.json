@@ -1,0 +1,16 @@
+{
+  "id": "mistral-distinct-alternatives",
+  "title": "Make alternatives meaningfully different",
+  "category": "writing",
+  "direction": "do",
+  "scope": "model",
+  "company": "mistral",
+  "model": "mistral-nemo",
+  "model_state": "deprecated",
+  "context": "Fiction — Mistral Nemo · Q8 · KoboldCPP",
+  "rule": "Make requested alternatives meaningfully different.",
+  "example": "Offer a quiet reconciliation and a tense unresolved encounter as two endings.",
+  "counterexample": "Offer the same ending three times with different adjectives.",
+  "rationale": "Different options should give the author a real choice.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/models/mistral/deprecated/mistral-nemo.md`. Examples are illustrative."
+}

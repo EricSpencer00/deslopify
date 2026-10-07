@@ -1,0 +1,16 @@
+{
+  "id": "public-copy-without-diagnostics",
+  "title": "Keep internal accounting out of storefronts",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Public-facing frontend copy",
+  "rule": "Remove the provider/catalog count and render accounting from the storefront, or move them to internal diagnostics. If a design selector works, keep its label in ordinary language, for example `Choose a design`. Omit an unusable control; do not imply it works.",
+  "example": "Choose a design / Mountain print",
+  "counterexample": "Swap design / Mountain print / Provider catalog: 120 items · 240 / 240 rendered",
+  "rationale": "A shopper needs the working choice and product information.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

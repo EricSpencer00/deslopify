@@ -1,0 +1,16 @@
+{
+  "id": "about-pages-answer-questions",
+  "title": "Make overview pages answer reader questions",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Public-facing frontend copy",
+  "rule": "About and overview pages should answer a reader's actual questions, not narrate the navigation. Skip repeated brand-name heroes, vague mission/tagline filler, and tours of every section; keep concrete identity, ownership, contact, and policy facts where they help the reader.",
+  "example": "About / Employee-owned design studio. / Contact hello@example.org.",
+  "counterexample": "Studio / About / A creative home for meaningful experiences. / Browse the projects and learn about the team.",
+  "rationale": "An overview should provide concrete identity and useful facts.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

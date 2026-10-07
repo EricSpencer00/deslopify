@@ -1,0 +1,16 @@
+{
+  "id": "alibaba-dont-repeat-taglines",
+  "title": "Avoid repeated closing taglines",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "alibaba",
+  "model": "qwen3-vl-32b-thinking",
+  "model_state": "available",
+  "context": "Conversation — Qwen3 VL Thinking 32B · Open WebUI / llama.cpp",
+  "rule": "Do not let a repeated closing tagline become the whole response template.",
+  "example": "Answer the follow-up with the requested detail and end there.",
+  "counterexample": "End every reply with the same unrelated “Let’s make magic happen!” tagline.",
+  "rationale": "A closing template can crowd out the actual answer.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/alibaba/available/qwen3-vl-32b-thinking.md`. Examples are illustrative."
+}

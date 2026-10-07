@@ -1,0 +1,16 @@
+{
+  "id": "useful-product-specs",
+  "title": "Keep useful product specifications",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Public-facing frontend copy",
+  "rule": "Keep customer-facing specs and compatibility details when they affect a visitor's choice or use.",
+  "example": "Exports CSV reports for up to 20 projects.",
+  "counterexample": "Exports reports.",
+  "rationale": "Formats, limits, and compatibility can affect the visitor’s decision.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

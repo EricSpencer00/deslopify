@@ -1,0 +1,16 @@
+{
+  "id": "google-dont-add-stock-fiction",
+  "title": "Avoid stock additions to supplied fiction",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "model",
+  "company": "google",
+  "model": "gemini-2.5-pro",
+  "model_state": "available",
+  "context": "Fiction — Gemini 2.5 Pro · AI Studio",
+  "rule": "Do not add stock names, contrast formulas or generic endings to a supplied passage.",
+  "example": "Continue the supplied scene using its established character names and tension.",
+  "counterexample": "Insert a stock name and “Little did they know, everything would change” into the passage.",
+  "rationale": "A continuation should develop the supplied story.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/google/available/gemini-2.5-pro.md`. Examples are illustrative."
+}

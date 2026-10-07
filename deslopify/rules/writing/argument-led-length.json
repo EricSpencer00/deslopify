@@ -1,0 +1,16 @@
+{
+  "id": "argument-led-length",
+  "title": "Let the argument set the length",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Paper writing",
+  "rule": "Let the argument determine paragraph length and structure. Do not arbitrarily limit or extend length of text to fit a predefined amount.",
+  "example": "Use two sentences for a simple result and a longer paragraph for its limitations.",
+  "counterexample": "Expand every result to exactly five sentences.",
+  "rationale": "Arbitrary length targets can distort the explanation.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/general.md`. Examples are illustrative."
+}

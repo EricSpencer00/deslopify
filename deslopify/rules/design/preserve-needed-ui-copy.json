@@ -1,0 +1,16 @@
+{
+  "id": "preserve-needed-ui-copy",
+  "title": "Preserve useful and accessible UI copy",
+  "category": "design",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Public-facing frontend copy",
+  "rule": "Keep copy that supplies needed context or navigation, accessible names and alt text, instructions, errors, product facts, and legal disclosures. A useful heading or label earns its place; minimalism is not a reason to remove it.",
+  "example": "Keep “Choose a size before adding to cart,” the accessible button name, and the returns disclosure.",
+  "counterexample": "Remove the size instruction, accessible name, and returns disclosure to make the card look minimal.",
+  "rationale": "Minimalism must retain the information needed to understand and use the interface.",
+  "evidence": "Migrated from existing SKILL.md guidance. Examples are illustrative; see deslopify/examples/website-copy.md."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "anthropic-dont-invent-experiences",
+  "title": "Do not invent the author’s experiences",
+  "category": "writing",
+  "direction": "dont",
+  "scope": "company",
+  "company": "anthropic",
+  "model": null,
+  "model_state": null,
+  "context": "Any writing",
+  "rule": "Do not invent experiences for the author.",
+  "example": "Write “The report describes a difficult launch” when only the report is supplied.",
+  "counterexample": "Write “I remember losing sleep during that launch” for an author who never supplied that experience.",
+  "rationale": "The writer’s personal history must come from the writer.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/ne-fac/_template/models/anthropic/general.md`. Examples are illustrative."
+}

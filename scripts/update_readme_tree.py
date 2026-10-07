@@ -36,6 +36,23 @@ def repository_files() -> list[Path]:
 
 
 def file_note(path: Path) -> str:
+    notes = {
+        Path("AGENTS.md"): "agent maintenance guide",
+        Path("CONTRIBUTING.md"): "rule form, example pair, and Actions workflow",
+        Path("deslopify/scripts/rules.py"): "validate, generate, and select rules",
+        Path("scripts/propose_rule.py"): "issue-form parser and add/change helper",
+        Path("scripts/rule_pull_request.py"): "issue-to-PR Actions entrypoint",
+        Path("deslopify/references/rule-index.md"): "browsable rule index",
+        Path("deslopify/references/rule-index.json"): "machine-readable rule index",
+        Path(".github/ISSUE_TEMPLATE/rule.yml"): "do/don't contribution form",
+        Path(".github/ISSUE_TEMPLATE/bug.yml"): "tooling bug and question form",
+        Path(".github/ISSUE_TEMPLATE/config.yml"): "issue chooser configuration",
+        Path(".github/workflows/rule-proposal.yml"): "validate issues and propose add/change PRs",
+    }
+    if path in notes:
+        return notes[path]
+    if path.parts[:2] == ("deslopify", "rules") and path.suffix == ".json":
+        return "canonical rule record"
     if path == Path("README.md"):
         return "purpose, installation, and usage"
     if path == Path("MODEL-CATALOG.md"):
@@ -60,6 +77,8 @@ def file_note(path: Path) -> str:
 
 
 def directory_note(path: Path) -> str:
+    if path == Path("deslopify/rules"):
+        return "canonical writing, taste, and design records"
     if path.name == "new":
         return NEW_MODEL_NOTES.get(path.parent.name, "provider-native model slots")
     if path.name == "available":

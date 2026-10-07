@@ -1,0 +1,16 @@
+{
+  "id": "cohere-retain-character-details",
+  "title": "Retain supplied character details",
+  "category": "writing",
+  "direction": "do",
+  "scope": "model",
+  "company": "cohere",
+  "model": "command-r-32b",
+  "model_state": "deprecated",
+  "context": "Fiction — Command-R 32B · Q6 · Backyard",
+  "rule": "Retain the supplied character details across turns.",
+  "example": "Mara is left-handed in both the opening and the next scene.",
+  "counterexample": "Mara becomes right-handed in the next scene without an explanation.",
+  "rationale": "Character continuity keeps the scene coherent.",
+  "evidence": "Migrated from existing repository guidance: `deslopify/fac/_template/models/cohere/deprecated/command-r-32b.md`. Examples are illustrative."
+}
