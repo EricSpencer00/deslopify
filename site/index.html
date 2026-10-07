@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>deslopify — edit AI habits out of your writing</title>
+  <meta name="description" content="deslopify is an agent skill with reviewed writing, taste, and design rules for cutting AI habits while preserving facts, caveats, and voice. Copy the folder into your agent’s skills directory, or suggest a rule on GitHub.">
+  <link rel="canonical" href="https://ericspencer.us/deslopify/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ericspencer.us/deslopify/">
+  <meta property="og:title" content="deslopify">
+  <meta property="og:description" content="Reviewed dos and don’ts for editing AI writing habits out of emails, papers, and web pages.">
+  <meta property="og:image" content="https://ericspencer.us/deslopify/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://ericspencer.us/deslopify/og.png">
+  <meta name="theme-color" content="#efe9dc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#rules">Skip to the rules</a>
+  <main class="sheet">
+
+    <header class="top">
+      <nav class="doc-meta" aria-label="Sections">
+        <span class="mark">Agent skill · MIT</span>
+        <span class="links">
+          <a href="#examples">Examples</a>
+          <a href="#install">Install</a>
+          <a href="#rules">Rules</a>
+          <a href="#contribute">Add a rule</a>
+          <a href="{{REPO}}">GitHub</a>
+        </span>
+      </nav>
+
+      <h1>deslopify</h1>
+      <p class="lede"><del class="hero-del">Unlock effortless, human-sounding writing with a powerful, seamless AI solution.</del>
+        <span class="hero-keep">An agent skill for editing AI writing habits out of emails, papers, web pages, and
+        <a href="https://noslopgrenade.com/">slop grenades</a>. It keeps the facts, caveats, and voice the reader needs.</span></p>
+      <p>The skill is a set of reviewed dos and don’ts. Each rule has an example that follows it and a counterexample
+        that breaks it. Some apply to every model; others were seen in one company’s models, or in one model in one setting.</p>
+      <p class="actions">
+        <a class="btn primary" href="#install">Install</a>
+        <a class="btn" href="#rules">Read the {{RULE_COUNT}} rules</a>
+      </p>
+    </header>
+
+    <section id="examples" aria-labelledby="examples-h">
+      <h2 id="examples-h">Before and after</h2>
+      <p>Struck-through text is what the skill cuts. The limits, links, product facts, and disclosures stay.</p>
+      {{EXAMPLES}}
+    </section>
+
+    <section id="install" aria-labelledby="install-h">
+      <h2 id="install-h">Install</h2>
+      <p>Copy the whole <code>deslopify/</code> folder into your project’s skills directory, subfolders included;
+        <code>SKILL.md</code> links into them. There is nothing else to install.</p>
+
+      <h3>Claude Code</h3>
+      <div class="code"><pre><code>git clone --depth 1 {{REPO}} /tmp/deslopify
+mkdir -p .claude/skills && cp -R /tmp/deslopify/deslopify .claude/skills/</code></pre></div>
+
+      <h3>Codex and other agents that read <code>.agents/skills</code></h3>
+      <div class="code"><pre><code>git clone --depth 1 {{REPO}} /tmp/deslopify
+mkdir -p .agents/skills && cp -R /tmp/deslopify/deslopify .agents/skills/</code></pre></div>
+
+      <h3>Use it</h3>
+      <p>Give it the draft and say who will read it. Call it with <code>/deslopify</code> in Claude Code or
+        <code>$deslopify</code> in Codex.</p>
+      <div class="code"><pre><code>$deslopify Edit this draft for its audience while preserving meaning, useful facts, and needed qualifications.</code></pre></div>
+    </section>
+
+    <section id="how" aria-labelledby="how-h">
+      <h2 id="how-h">How it picks rules</h2>
+      <dl class="terms">
+        <div><dt>Writing</dt><dd>Wording, structure, and meaning.</dd></div>
+        <div><dt>Taste</dt><dd>A stated aesthetic preference. Not a test of correctness.</dd></div>
+        <div><dt>Design</dt><dd>Layout, visuals, and interactions.</dd></div>
+      </dl>
+      <p>It reads the rules for every model, then adds a company’s or model’s rules only when you name one.
+        It does not guess the model from a draft’s style, and it does not stretch one model’s habit to all of them.</p>
+      <p>Some text is never cut for being “AI-sounding”: UI labels, accessible names, instructions, errors,
+        product facts, and required disclosures.</p>
+      <p>To see only the rules that apply to a task, run the bundled script (Python 3, standard library only):</p>
+      <div class="code"><pre><code>python3 .claude/skills/deslopify/scripts/rules.py select --category writing --company openai --model gpt-5.5</code></pre></div>
+      <p class="small">Add <code>--format json</code> for structured records. Leave out <code>--company</code> and <code>--model</code> for the every-model rules only. For Codex, use the <code>.agents/skills</code> path.</p>
+    </section>
+
+    <section id="rules" aria-labelledby="rules-h">
+      <h2 id="rules-h">The rules</h2>
+      <p>{{RULE_COUNT}} rules: {{ALL_COUNT}} for every model and {{SPECIFIC_COUNT}} for specific companies or models.
+        A company or model rule records a habit seen in that company’s models, or in one model in one setting, so it
+        applies only when you know where the draft came from. The examples are illustrative, not benchmark results.</p>
+
+      <form class="filters" role="search" aria-label="Filter rules" hidden>
+        <label class="search"><span>Search</span><input type="search" name="q" placeholder="e.g. repetition, fiction, goblin" autocomplete="off"></label>
+        <label><span>Category</span>
+          <select name="category"><option value="">Any</option><option value="writing">Writing</option><option value="taste">Taste</option><option value="design">Design</option></select></label>
+        <label><span>Type</span>
+          <select name="direction"><option value="">Any</option><option value="do">Dos</option><option value="dont">Don’ts</option></select></label>
+        <label><span>Applies to</span>
+          <select name="company"><option value="">Everything</option>{{COMPANY_OPTIONS}}</select></label>
+        <p class="result" aria-live="polite"></p>
+      </form>
+
+      <div class="rule-list">
+        {{RULES}}
+      </div>
+      <p class="empty" hidden>No rule matches. <a href="#contribute">Suggest one.</a></p>
+    </section>
+
+    <section id="contribute" aria-labelledby="contribute-h">
+      <h2 id="contribute-h">Add or change a rule</h2>
+      <p>Fill out the rule form on GitHub. You don’t need to clone anything or write code. Give one example that
+        follows the rule and one counterexample that breaks it, choose the narrowest scope your observation supports,
+        and say why it helps.</p>
+      <p class="actions"><a class="btn primary" href="{{REPO}}/issues/new?template=rule.yml">Open the rule form</a></p>
+      <p>A maintainer runs a GitHub Actions workflow that turns the issue into a pull request. Merging it updates the
+        skill and this page.</p>
+      <details class="record">
+        <summary>Editing the files directly</summary>
+        <p>Each rule is one JSON record in <code>deslopify/rules/&lt;category&gt;/&lt;id&gt;.json</code>.
+          Keep the ID when you revise a rule. Then run the checks in
+          <a href="{{REPO}}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+        <div class="code"><pre><code>{
+  "id": "avoid-empty-superlatives",
+  "title": "Replace empty praise with a concrete benefit",
+  "category": "writing",
+  "direction": "do",
+  "scope": "all",
+  "company": null,
+  "model": null,
+  "model_state": null,
+  "context": "Product descriptions. Preserve useful specifications and required disclosures.",
+  "rule": "Replace unsupported praise with a specific benefit the product actually offers.",
+  "example": "Export all invoices as a CSV file.",
+  "counterexample": "Unlock an incredible, seamless invoice experience.",
+  "rationale": "Readers can decide whether the product solves their problem.",
+  "evidence": "Illustrative example, not a recorded model output."
+}</code></pre></div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <p>Related: <a href="https://github.com/peteromallet/desloppify">peteromallet/desloppify</a> cleans up codebases
+        rather than writing, and <a href="https://github.com/shreyas-makes/deslopify">shreyas-makes/deslopify</a>
+        is an earlier take on this idea.</p>
+      <p>By <a href="https://ericspencer.us/">Eric Spencer</a>. MIT licensed.
+        <a href="{{REPO}}">Source on GitHub</a>. This page is generated from the skill’s rule files, and its copy was edited with the skill.</p>
+    </footer>
+  </main>
+</body>
+</html>

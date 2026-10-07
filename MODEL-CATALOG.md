@@ -11,6 +11,7 @@
 │   │   ├── config.yml — issue chooser configuration
 │   │   └── rule.yml — do/don't contribution form
 │   └── workflows/
+│       ├── pages.yml — build and deploy the website
 │       ├── readme-tree.yml — CI update job
 │       └── rule-proposal.yml — validate issues and propose add/change PRs
 ├── deslopify/
@@ -788,17 +789,25 @@
 │   │   └── rules.py — validate, generate, and select rules
 │   └── SKILL.md — skill entrypoint
 ├── scripts/
+│   ├── build_site.py — website generator
 │   ├── propose_rule.py — issue-form parser and add/change helper
 │   ├── rule_pull_request.py — issue-to-PR Actions entrypoint
 │   ├── sync_model_harnesses.py — provider-native model slot sync
 │   ├── update_readme_tree.py — catalog generator
 │   └── validate_content.py — repository file
+├── site/
+│   ├── app.js — rule filters and copy buttons
+│   ├── favicon.svg — website icon
+│   ├── index.html — website page template
+│   ├── og.png — link preview image
+│   └── style.css — website styles
 ├── tests/
 │   ├── fixtures/
 │   │   └── rewrites.json — repository file
 │   ├── test_content.py — repository file
 │   ├── test_rule_pull_request.py — repository file
-│   └── test_rules.py — repository file
+│   ├── test_rules.py — repository file
+│   └── test_site.py — website build tests
 ├── .gitignore — repository file
 ├── AGENTS.md — agent maintenance guide
 ├── CONTRIBUTING.md — rule form, example pair, and Actions workflow

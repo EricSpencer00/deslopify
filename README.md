@@ -1,7 +1,7 @@
 # deslopify
 remove AI-generated -isms from your emails, website designs, or "[slop-grenades](https://noslopgrenade.com/)"
 
-Start with [the skill](deslopify/SKILL.md) or [the website-copy examples](deslopify/examples/website-copy.md).
+Read [the website](https://ericspencer.us/deslopify/), or start with [the skill](deslopify/SKILL.md) or [the website-copy examples](deslopify/examples/website-copy.md).
 
 ## Add a do or don't
 
