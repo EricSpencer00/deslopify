@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 SKILL = ROOT / "deslopify"
 REPO = "https://github.com/EricSpencer00/deslopify"
+URL = "https://ericspencer.us/deslopify/"
 sys.path.insert(0, str(SKILL / "scripts"))
 import rules as rulebook  # noqa: E402
 
@@ -192,6 +193,11 @@ def build(out: Path) -> None:
         if (SITE / name).exists():
             shutil.copy2(SITE / name, out / name)
     (out / ".nojekyll").write_text("")
+    # ericspencer.us/robots.txt points crawlers here.
+    (out / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"  <url><loc>{URL}</loc></url>\n</urlset>\n", encoding="utf-8")
 
 
 def main() -> int:
