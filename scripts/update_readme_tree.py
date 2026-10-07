@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "MODEL-CATALOG.md"
 START = "<!-- CATALOG TREE START -->"
 END = "<!-- CATALOG TREE END -->"
-IGNORED = {".git", ".agents", "__pycache__"}
+IGNORED = {".git", ".agents", "__pycache__", "_site"}
 MODEL_STATES = {"new", "available", "deprecated"}
 NEW_MODEL_NOTES = {
     "alibaba": "Qwen Code model slots",
@@ -48,6 +48,14 @@ def file_note(path: Path) -> str:
         Path(".github/ISSUE_TEMPLATE/bug.yml"): "tooling bug and question form",
         Path(".github/ISSUE_TEMPLATE/config.yml"): "issue chooser configuration",
         Path(".github/workflows/rule-proposal.yml"): "validate issues and propose add/change PRs",
+        Path(".github/workflows/pages.yml"): "build and deploy the website",
+        Path("scripts/build_site.py"): "website generator",
+        Path("site/index.html"): "website page template",
+        Path("site/style.css"): "website styles",
+        Path("site/app.js"): "rule filters and copy buttons",
+        Path("site/favicon.svg"): "website icon",
+        Path("site/og.png"): "link preview image",
+        Path("tests/test_site.py"): "website build tests",
     }
     if path in notes:
         return notes[path]
